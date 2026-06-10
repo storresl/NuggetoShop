@@ -14,43 +14,46 @@
 <!-- Items Grid -->
 <div class="max-w-5xl mx-auto pb-12">
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-    
     <%= for item <- @items do %>
-      <div class={["group rounded-2xl border border-gray-100 bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col", if(not item.available, do: "opacity-60 grayscale", else: "")]}>
-        
+      <div class={[
+        "group rounded-2xl border border-gray-100 bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col",
+        if(not item.available, do: "opacity-60 grayscale", else: "")
+      ]}>
         <!-- Image Placeholder -->
         <div class="aspect-square bg-gray-50 relative overflow-hidden flex items-center justify-center border-b border-gray-100">
-          <span class="text-gray-400 text-sm">[Foto: <%= item.name %>]</span>
+          <span class="text-gray-400 text-sm">[Foto: {item.name}]</span>
         </div>
 
         <!-- Card Content -->
         <div class="p-5 flex flex-col flex-grow">
           <div class="flex justify-between items-start mb-2">
-            <h2 class="text-lg font-bold text-gray-900 leading-tight"><%= item.name %></h2>
+            <h2 class="text-lg font-bold text-gray-900 leading-tight">{item.name}</h2>
             <span class="inline-block bg-[#FCD34D]/20 text-[#F97316] font-bold px-2 py-1 rounded text-sm whitespace-nowrap ml-2">
-              <%= item.price %>
+              {item.price}
             </span>
           </div>
-          
+
           <p class="text-gray-600 text-sm mb-6 flex-grow line-clamp-3">
-            <%= item.description %>
+            {item.description}
           </p>
 
           <%= if item.available do %>
-            <% whatsapp_msg = URI.encode("¡Hola! Me interesa el producto: #{item.name} de Almacén Don Nuggeto.") %>
-            <a href={"https://wa.me/56912345678?text=#{whatsapp_msg}"} 
-               target="_blank"
-               class="block w-full text-center bg-[#F97316] hover:bg-orange-600 text-white font-semibold py-2.5 rounded-xl transition-colors shadow-sm">
-               Contactar por WhatsApp
+            <% whatsapp_msg =
+              URI.encode("¡Hola! Me interesa el producto: #{item.name} de Almacén Don Nuggeto.") %>
+            <a
+              href={"https://wa.me/56912345678?text=#{whatsapp_msg}"}
+              target="_blank"
+              class="block w-full text-center bg-[#F97316] hover:bg-orange-600 text-white font-semibold py-2.5 rounded-xl transition-colors shadow-sm"
+            >
+              Contactar por WhatsApp
             </a>
           <% else %>
             <div class="block w-full text-center bg-gray-100 text-gray-500 font-semibold py-2.5 rounded-xl cursor-not-allowed">
-               Vendido
+              Vendido
             </div>
           <% end %>
         </div>
       </div>
     <% end %>
-
   </div>
 </div>
