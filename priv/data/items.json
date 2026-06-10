@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Microondas (Casi Nuevo)",
+    "price": "$30.000",
+    "description": "Funciona perfecto. Me mudo a Francia y no me lo puedo llevar.",
+    "image_url": "/images/microwave.jpg",
+    "available": true
+  },
+  {
+    "id": 2,
+    "name": "Raqueta de Tenis",
+    "price": "$15.000",
+    "description": "Raqueta Babolat, grip con poco uso. Ideal para empezar.",
+    "image_url": "/images/racquet.jpg",
+    "available": true
+  },
+  {
+    "id": 3,
+    "name": "Hervidor Eléctrico",
+    "price": "$8.000",
+    "description": "Hervidor de 1.7 litros, calienta súper rápido.",
+    "image_url": "/images/kettle.jpg",
+    "available": false
+  }
+]
