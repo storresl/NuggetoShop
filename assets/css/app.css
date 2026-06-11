@@ -114,3 +114,7 @@
 .hide-scrollbar::-webkit-scrollbar {
   display: none; /* Chrome, Safari and Opera */
 }
+
+.font-outfit {
+  font-family: 'Outfit', sans-serif;
+}

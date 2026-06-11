@@ -1,276 +1,276 @@
 [
   {
     "id": 1,
-    "name": "Item 1 de Camping",
-    "description": "Un excelente producto de la categoría Camping. Poco uso, en muy buen estado.",
-    "category": "Camping",
-    "available": false,
-    "price": "$11.000",
+    "name": "Item 1 de Libros",
+    "description": "Un excelente producto de la categoría Libros. Poco uso, en muy buen estado.",
+    "category": "Libros",
+    "available": true,
     "images": [
       "https://picsum.photos/seed/1a/400/400",
       "https://picsum.photos/seed/1b/400/400",
       "https://picsum.photos/seed/1c/400/400"
-    ]
+    ],
+    "price": "$8.000"
   },
   {
     "id": 2,
-    "name": "Item 2 de Deporte",
-    "description": "Un excelente producto de la categoría Deporte. Poco uso, en muy buen estado.",
-    "category": "Deporte",
+    "name": "Item 2 de Videojuegos",
+    "description": "Un excelente producto de la categoría Videojuegos. Poco uso, en muy buen estado.",
+    "category": "Videojuegos",
     "available": true,
-    "price": "$43.000",
     "images": [
       "https://picsum.photos/seed/2a/400/400",
       "https://picsum.photos/seed/2b/400/400",
       "https://picsum.photos/seed/2c/400/400"
-    ]
+    ],
+    "price": "$35.000"
   },
   {
     "id": 3,
-    "name": "Item 3 de Juegos de Mesa",
-    "description": "Un excelente producto de la categoría Juegos de Mesa. Poco uso, en muy buen estado.",
-    "category": "Juegos de Mesa",
-    "available": true,
-    "price": "$46.000",
+    "name": "Item 3 de Libros",
+    "description": "Un excelente producto de la categoría Libros. Poco uso, en muy buen estado.",
+    "category": "Libros",
+    "available": false,
     "images": [
       "https://picsum.photos/seed/3a/400/400",
       "https://picsum.photos/seed/3b/400/400",
       "https://picsum.photos/seed/3c/400/400"
-    ]
+    ],
+    "price": "$35.000"
   },
   {
     "id": 4,
-    "name": "Item 4 de Libros",
-    "description": "Un excelente producto de la categoría Libros. Poco uso, en muy buen estado.",
-    "category": "Libros",
+    "name": "Item 4 de Deporte",
+    "description": "Un excelente producto de la categoría Deporte. Poco uso, en muy buen estado.",
+    "category": "Deporte",
     "available": true,
-    "price": "$46.000",
     "images": [
       "https://picsum.photos/seed/4a/400/400",
       "https://picsum.photos/seed/4b/400/400",
       "https://picsum.photos/seed/4c/400/400"
-    ]
+    ],
+    "price": "$18.000"
   },
   {
     "id": 5,
-    "name": "Item 5 de Camping",
-    "description": "Un excelente producto de la categoría Camping. Poco uso, en muy buen estado.",
-    "category": "Camping",
-    "available": true,
-    "price": "$10.000",
+    "name": "Item 5 de Música",
+    "description": "Un excelente producto de la categoría Música. Poco uso, en muy buen estado.",
+    "category": "Música",
+    "available": false,
     "images": [
       "https://picsum.photos/seed/5a/400/400",
       "https://picsum.photos/seed/5b/400/400",
       "https://picsum.photos/seed/5c/400/400"
-    ]
+    ],
+    "price": "$12.000"
   },
   {
     "id": 6,
-    "name": "Item 6 de Música",
-    "description": "Un excelente producto de la categoría Música. Poco uso, en muy buen estado.",
-    "category": "Música",
-    "available": false,
-    "price": "$31.000",
+    "name": "Item 6 de Libros",
+    "description": "Un excelente producto de la categoría Libros. Poco uso, en muy buen estado.",
+    "category": "Libros",
+    "available": true,
     "images": [
       "https://picsum.photos/seed/6a/400/400",
       "https://picsum.photos/seed/6b/400/400",
       "https://picsum.photos/seed/6c/400/400"
-    ]
+    ],
+    "price": "$34.000"
   },
   {
     "id": 7,
-    "name": "Item 7 de Videojuegos",
-    "description": "Un excelente producto de la categoría Videojuegos. Poco uso, en muy buen estado.",
-    "category": "Videojuegos",
+    "name": "Item 7 de Electrodomésticos",
+    "description": "Un excelente producto de la categoría Electrodomésticos. Poco uso, en muy buen estado.",
+    "category": "Electrodomésticos",
     "available": true,
-    "price": "$18.000",
     "images": [
       "https://picsum.photos/seed/7a/400/400",
       "https://picsum.photos/seed/7b/400/400",
       "https://picsum.photos/seed/7c/400/400"
-    ]
+    ],
+    "price": "$37.000"
   },
   {
     "id": 8,
     "name": "Item 8 de Deporte",
     "description": "Un excelente producto de la categoría Deporte. Poco uso, en muy buen estado.",
     "category": "Deporte",
-    "available": false,
-    "price": "$25.000",
+    "available": true,
     "images": [
       "https://picsum.photos/seed/8a/400/400",
       "https://picsum.photos/seed/8b/400/400",
       "https://picsum.photos/seed/8c/400/400"
-    ]
+    ],
+    "price": "$32.000"
   },
   {
     "id": 9,
-    "name": "Item 9 de Camping",
-    "description": "Un excelente producto de la categoría Camping. Poco uso, en muy buen estado.",
-    "category": "Camping",
-    "available": true,
-    "price": "$22.000",
+    "name": "Item 9 de Música",
+    "description": "Un excelente producto de la categoría Música. Poco uso, en muy buen estado.",
+    "category": "Música",
+    "available": false,
     "images": [
       "https://picsum.photos/seed/9a/400/400",
       "https://picsum.photos/seed/9b/400/400",
       "https://picsum.photos/seed/9c/400/400"
-    ]
+    ],
+    "price": "$42.000"
   },
   {
     "id": 10,
-    "name": "Item 10 de Deporte",
-    "description": "Un excelente producto de la categoría Deporte. Poco uso, en muy buen estado.",
-    "category": "Deporte",
+    "name": "Item 10 de Videojuegos",
+    "description": "Un excelente producto de la categoría Videojuegos. Poco uso, en muy buen estado.",
+    "category": "Videojuegos",
     "available": true,
-    "price": "$36.000",
     "images": [
       "https://picsum.photos/seed/10a/400/400",
       "https://picsum.photos/seed/10b/400/400",
       "https://picsum.photos/seed/10c/400/400"
-    ]
+    ],
+    "price": "$11.000"
   },
   {
     "id": 11,
-    "name": "Item 11 de Deporte",
-    "description": "Un excelente producto de la categoría Deporte. Poco uso, en muy buen estado.",
-    "category": "Deporte",
-    "available": true,
-    "price": "$25.000",
+    "name": "Item 11 de Videojuegos",
+    "description": "Un excelente producto de la categoría Videojuegos. Poco uso, en muy buen estado.",
+    "category": "Videojuegos",
+    "available": false,
     "images": [
       "https://picsum.photos/seed/11a/400/400",
       "https://picsum.photos/seed/11b/400/400",
       "https://picsum.photos/seed/11c/400/400"
-    ]
+    ],
+    "price": "$42.000"
   },
   {
     "id": 12,
-    "name": "Item 12 de Música",
-    "description": "Un excelente producto de la categoría Música. Poco uso, en muy buen estado.",
-    "category": "Música",
+    "name": "Item 12 de Juegos de Mesa",
+    "description": "Un excelente producto de la categoría Juegos de Mesa. Poco uso, en muy buen estado.",
+    "category": "Juegos de Mesa",
     "available": false,
-    "price": "$29.000",
     "images": [
       "https://picsum.photos/seed/12a/400/400",
       "https://picsum.photos/seed/12b/400/400",
       "https://picsum.photos/seed/12c/400/400"
-    ]
+    ],
+    "price": "$27.000"
   },
   {
     "id": 13,
-    "name": "Item 13 de Libros",
-    "description": "Un excelente producto de la categoría Libros. Poco uso, en muy buen estado.",
-    "category": "Libros",
-    "available": true,
-    "price": "$6.000",
+    "name": "Item 13 de Videojuegos",
+    "description": "Un excelente producto de la categoría Videojuegos. Poco uso, en muy buen estado.",
+    "category": "Videojuegos",
+    "available": false,
     "images": [
       "https://picsum.photos/seed/13a/400/400",
       "https://picsum.photos/seed/13b/400/400",
       "https://picsum.photos/seed/13c/400/400"
-    ]
+    ],
+    "price": "$41.000"
   },
   {
     "id": 14,
-    "name": "Item 14 de Videojuegos",
-    "description": "Un excelente producto de la categoría Videojuegos. Poco uso, en muy buen estado.",
-    "category": "Videojuegos",
+    "name": "Item 14 de Camping",
+    "description": "Un excelente producto de la categoría Camping. Poco uso, en muy buen estado.",
+    "category": "Camping",
     "available": true,
-    "price": "$9.000",
     "images": [
       "https://picsum.photos/seed/14a/400/400",
       "https://picsum.photos/seed/14b/400/400",
       "https://picsum.photos/seed/14c/400/400"
-    ]
+    ],
+    "price": "$18.000"
   },
   {
     "id": 15,
-    "name": "Item 15 de Juegos de Mesa",
-    "description": "Un excelente producto de la categoría Juegos de Mesa. Poco uso, en muy buen estado.",
-    "category": "Juegos de Mesa",
-    "available": true,
-    "price": "$8.000",
+    "name": "Item 15 de Muebles",
+    "description": "Un excelente producto de la categoría Muebles. Poco uso, en muy buen estado.",
+    "category": "Muebles",
+    "available": false,
     "images": [
       "https://picsum.photos/seed/15a/400/400",
       "https://picsum.photos/seed/15b/400/400",
       "https://picsum.photos/seed/15c/400/400"
-    ]
+    ],
+    "price": "$46.000"
   },
   {
     "id": 16,
-    "name": "Item 16 de Camping",
-    "description": "Un excelente producto de la categoría Camping. Poco uso, en muy buen estado.",
-    "category": "Camping",
+    "name": "Item 16 de Música",
+    "description": "Un excelente producto de la categoría Música. Poco uso, en muy buen estado.",
+    "category": "Música",
     "available": true,
-    "price": "$41.000",
     "images": [
       "https://picsum.photos/seed/16a/400/400",
       "https://picsum.photos/seed/16b/400/400",
       "https://picsum.photos/seed/16c/400/400"
-    ]
+    ],
+    "price": "$18.000"
   },
   {
     "id": 17,
-    "name": "Item 17 de Camping",
-    "description": "Un excelente producto de la categoría Camping. Poco uso, en muy buen estado.",
-    "category": "Camping",
+    "name": "Item 17 de Videojuegos",
+    "description": "Un excelente producto de la categoría Videojuegos. Poco uso, en muy buen estado.",
+    "category": "Videojuegos",
     "available": true,
-    "price": "$48.000",
     "images": [
       "https://picsum.photos/seed/17a/400/400",
       "https://picsum.photos/seed/17b/400/400",
       "https://picsum.photos/seed/17c/400/400"
-    ]
+    ],
+    "price": "$11.000"
   },
   {
     "id": 18,
-    "name": "Item 18 de Libros",
-    "description": "Un excelente producto de la categoría Libros. Poco uso, en muy buen estado.",
-    "category": "Libros",
+    "name": "Item 18 de Camping",
+    "description": "Un excelente producto de la categoría Camping. Poco uso, en muy buen estado.",
+    "category": "Camping",
     "available": true,
-    "price": "$32.000",
     "images": [
       "https://picsum.photos/seed/18a/400/400",
       "https://picsum.photos/seed/18b/400/400",
       "https://picsum.photos/seed/18c/400/400"
-    ]
+    ],
+    "price": "$12.000"
   },
   {
     "id": 19,
-    "name": "Item 19 de Camping",
-    "description": "Un excelente producto de la categoría Camping. Poco uso, en muy buen estado.",
-    "category": "Camping",
+    "name": "Item 19 de Muebles",
+    "description": "Un excelente producto de la categoría Muebles. Poco uso, en muy buen estado.",
+    "category": "Muebles",
     "available": true,
-    "price": "$49.000",
     "images": [
       "https://picsum.photos/seed/19a/400/400",
       "https://picsum.photos/seed/19b/400/400",
       "https://picsum.photos/seed/19c/400/400"
-    ]
+    ],
+    "price": "$23.000"
   },
   {
     "id": 20,
-    "name": "Item 20 de Libros",
-    "description": "Un excelente producto de la categoría Libros. Poco uso, en muy buen estado.",
-    "category": "Libros",
+    "name": "Item 20 de Muebles",
+    "description": "Un excelente producto de la categoría Muebles. Poco uso, en muy buen estado.",
+    "category": "Muebles",
     "available": true,
-    "price": "$15.000",
     "images": [
       "https://picsum.photos/seed/20a/400/400",
       "https://picsum.photos/seed/20b/400/400",
       "https://picsum.photos/seed/20c/400/400"
-    ]
+    ],
+    "price": "$9.000"
   },
   {
     "id": 21,
-    "name": "Item 21 de Camping",
-    "description": "Un excelente producto de la categoría Camping. Poco uso, en muy buen estado.",
-    "category": "Camping",
-    "available": false,
-    "price": "$10.000",
+    "name": "Item 21 de Electrodomésticos",
+    "description": "Un excelente producto de la categoría Electrodomésticos. Poco uso, en muy buen estado.",
+    "category": "Electrodomésticos",
+    "available": true,
     "images": [
       "https://picsum.photos/seed/21a/400/400",
       "https://picsum.photos/seed/21b/400/400",
       "https://picsum.photos/seed/21c/400/400"
-    ]
+    ],
+    "price": "$15.000"
   },
   {
     "id": 22,
@@ -278,38 +278,38 @@
     "description": "Un excelente producto de la categoría Libros. Poco uso, en muy buen estado.",
     "category": "Libros",
     "available": true,
-    "price": "$48.000",
     "images": [
       "https://picsum.photos/seed/22a/400/400",
       "https://picsum.photos/seed/22b/400/400",
       "https://picsum.photos/seed/22c/400/400"
-    ]
+    ],
+    "price": "$32.000"
   },
   {
     "id": 23,
-    "name": "Item 23 de Libros",
-    "description": "Un excelente producto de la categoría Libros. Poco uso, en muy buen estado.",
-    "category": "Libros",
-    "available": true,
-    "price": "$21.000",
+    "name": "Item 23 de Juegos de Mesa",
+    "description": "Un excelente producto de la categoría Juegos de Mesa. Poco uso, en muy buen estado.",
+    "category": "Juegos de Mesa",
+    "available": false,
     "images": [
       "https://picsum.photos/seed/23a/400/400",
       "https://picsum.photos/seed/23b/400/400",
       "https://picsum.photos/seed/23c/400/400"
-    ]
+    ],
+    "price": "$38.000"
   },
   {
     "id": 24,
-    "name": "Item 24 de Libros",
-    "description": "Un excelente producto de la categoría Libros. Poco uso, en muy buen estado.",
-    "category": "Libros",
-    "available": false,
-    "price": "$19.000",
+    "name": "Item 24 de Muebles",
+    "description": "Un excelente producto de la categoría Muebles. Poco uso, en muy buen estado.",
+    "category": "Muebles",
+    "available": true,
     "images": [
       "https://picsum.photos/seed/24a/400/400",
       "https://picsum.photos/seed/24b/400/400",
       "https://picsum.photos/seed/24c/400/400"
-    ]
+    ],
+    "price": "$6.000"
   },
   {
     "id": 25,
@@ -317,64 +317,64 @@
     "description": "Un excelente producto de la categoría Videojuegos. Poco uso, en muy buen estado.",
     "category": "Videojuegos",
     "available": true,
-    "price": "$32.000",
     "images": [
       "https://picsum.photos/seed/25a/400/400",
       "https://picsum.photos/seed/25b/400/400",
       "https://picsum.photos/seed/25c/400/400"
-    ]
+    ],
+    "price": "$42.000"
   },
   {
     "id": 26,
-    "name": "Item 26 de Música",
-    "description": "Un excelente producto de la categoría Música. Poco uso, en muy buen estado.",
-    "category": "Música",
+    "name": "Item 26 de Videojuegos",
+    "description": "Un excelente producto de la categoría Videojuegos. Poco uso, en muy buen estado.",
+    "category": "Videojuegos",
     "available": true,
-    "price": "$16.000",
     "images": [
       "https://picsum.photos/seed/26a/400/400",
       "https://picsum.photos/seed/26b/400/400",
       "https://picsum.photos/seed/26c/400/400"
-    ]
+    ],
+    "price": "$36.000"
   },
   {
     "id": 27,
-    "name": "Item 27 de Deporte",
-    "description": "Un excelente producto de la categoría Deporte. Poco uso, en muy buen estado.",
-    "category": "Deporte",
-    "available": true,
-    "price": "$45.000",
+    "name": "Item 27 de Videojuegos",
+    "description": "Un excelente producto de la categoría Videojuegos. Poco uso, en muy buen estado.",
+    "category": "Videojuegos",
+    "available": false,
     "images": [
       "https://picsum.photos/seed/27a/400/400",
       "https://picsum.photos/seed/27b/400/400",
       "https://picsum.photos/seed/27c/400/400"
-    ]
+    ],
+    "price": "$30.000"
   },
   {
     "id": 28,
-    "name": "Item 28 de Libros",
-    "description": "Un excelente producto de la categoría Libros. Poco uso, en muy buen estado.",
-    "category": "Libros",
+    "name": "Item 28 de Camping",
+    "description": "Un excelente producto de la categoría Camping. Poco uso, en muy buen estado.",
+    "category": "Camping",
     "available": true,
-    "price": "$16.000",
     "images": [
       "https://picsum.photos/seed/28a/400/400",
       "https://picsum.photos/seed/28b/400/400",
       "https://picsum.photos/seed/28c/400/400"
-    ]
+    ],
+    "price": "$24.000"
   },
   {
     "id": 29,
-    "name": "Item 29 de Deporte",
-    "description": "Un excelente producto de la categoría Deporte. Poco uso, en muy buen estado.",
-    "category": "Deporte",
+    "name": "Item 29 de Juegos de Mesa",
+    "description": "Un excelente producto de la categoría Juegos de Mesa. Poco uso, en muy buen estado.",
+    "category": "Juegos de Mesa",
     "available": true,
-    "price": "$22.000",
     "images": [
       "https://picsum.photos/seed/29a/400/400",
       "https://picsum.photos/seed/29b/400/400",
       "https://picsum.photos/seed/29c/400/400"
-    ]
+    ],
+    "price": "$21.000"
   },
   {
     "id": 30,
@@ -382,141 +382,141 @@
     "description": "Un excelente producto de la categoría Camping. Poco uso, en muy buen estado.",
     "category": "Camping",
     "available": true,
-    "price": "$45.000",
     "images": [
       "https://picsum.photos/seed/30a/400/400",
       "https://picsum.photos/seed/30b/400/400",
       "https://picsum.photos/seed/30c/400/400"
-    ]
+    ],
+    "price": "$18.000"
   },
   {
     "id": 31,
-    "name": "Item 31 de Deporte",
-    "description": "Un excelente producto de la categoría Deporte. Poco uso, en muy buen estado.",
-    "category": "Deporte",
+    "name": "Item 31 de Música",
+    "description": "Un excelente producto de la categoría Música. Poco uso, en muy buen estado.",
+    "category": "Música",
     "available": true,
-    "price": "$49.000",
     "images": [
       "https://picsum.photos/seed/31a/400/400",
       "https://picsum.photos/seed/31b/400/400",
       "https://picsum.photos/seed/31c/400/400"
-    ]
+    ],
+    "price": "$19.000"
   },
   {
     "id": 32,
-    "name": "Item 32 de Música",
-    "description": "Un excelente producto de la categoría Música. Poco uso, en muy buen estado.",
-    "category": "Música",
-    "available": false,
-    "price": "$33.000",
+    "name": "Item 32 de Videojuegos",
+    "description": "Un excelente producto de la categoría Videojuegos. Poco uso, en muy buen estado.",
+    "category": "Videojuegos",
+    "available": true,
     "images": [
       "https://picsum.photos/seed/32a/400/400",
       "https://picsum.photos/seed/32b/400/400",
       "https://picsum.photos/seed/32c/400/400"
-    ]
+    ],
+    "price": "$13.000"
   },
   {
     "id": 33,
-    "name": "Item 33 de Juegos de Mesa",
-    "description": "Un excelente producto de la categoría Juegos de Mesa. Poco uso, en muy buen estado.",
-    "category": "Juegos de Mesa",
+    "name": "Item 33 de Muebles",
+    "description": "Un excelente producto de la categoría Muebles. Poco uso, en muy buen estado.",
+    "category": "Muebles",
     "available": true,
-    "price": "$11.000",
     "images": [
       "https://picsum.photos/seed/33a/400/400",
       "https://picsum.photos/seed/33b/400/400",
       "https://picsum.photos/seed/33c/400/400"
-    ]
+    ],
+    "price": "$28.000"
   },
   {
     "id": 34,
-    "name": "Item 34 de Videojuegos",
-    "description": "Un excelente producto de la categoría Videojuegos. Poco uso, en muy buen estado.",
-    "category": "Videojuegos",
+    "name": "Item 34 de Electrodomésticos",
+    "description": "Un excelente producto de la categoría Electrodomésticos. Poco uso, en muy buen estado.",
+    "category": "Electrodomésticos",
     "available": true,
-    "price": "$37.000",
     "images": [
       "https://picsum.photos/seed/34a/400/400",
       "https://picsum.photos/seed/34b/400/400",
       "https://picsum.photos/seed/34c/400/400"
-    ]
+    ],
+    "price": "$8.000"
   },
   {
     "id": 35,
-    "name": "Item 35 de Videojuegos",
-    "description": "Un excelente producto de la categoría Videojuegos. Poco uso, en muy buen estado.",
-    "category": "Videojuegos",
+    "name": "Item 35 de Camping",
+    "description": "Un excelente producto de la categoría Camping. Poco uso, en muy buen estado.",
+    "category": "Camping",
     "available": true,
-    "price": "$50.000",
     "images": [
       "https://picsum.photos/seed/35a/400/400",
       "https://picsum.photos/seed/35b/400/400",
       "https://picsum.photos/seed/35c/400/400"
-    ]
+    ],
+    "price": "$45.000"
   },
   {
     "id": 36,
-    "name": "Item 36 de Deporte",
-    "description": "Un excelente producto de la categoría Deporte. Poco uso, en muy buen estado.",
-    "category": "Deporte",
-    "available": true,
-    "price": "$23.000",
+    "name": "Item 36 de Videojuegos",
+    "description": "Un excelente producto de la categoría Videojuegos. Poco uso, en muy buen estado.",
+    "category": "Videojuegos",
+    "available": false,
     "images": [
       "https://picsum.photos/seed/36a/400/400",
       "https://picsum.photos/seed/36b/400/400",
       "https://picsum.photos/seed/36c/400/400"
-    ]
+    ],
+    "price": "$12.000"
   },
   {
     "id": 37,
-    "name": "Item 37 de Libros",
-    "description": "Un excelente producto de la categoría Libros. Poco uso, en muy buen estado.",
-    "category": "Libros",
+    "name": "Item 37 de Camping",
+    "description": "Un excelente producto de la categoría Camping. Poco uso, en muy buen estado.",
+    "category": "Camping",
     "available": true,
-    "price": "$35.000",
     "images": [
       "https://picsum.photos/seed/37a/400/400",
       "https://picsum.photos/seed/37b/400/400",
       "https://picsum.photos/seed/37c/400/400"
-    ]
+    ],
+    "price": "$38.000"
   },
   {
     "id": 38,
-    "name": "Item 38 de Música",
-    "description": "Un excelente producto de la categoría Música. Poco uso, en muy buen estado.",
-    "category": "Música",
+    "name": "Item 38 de Libros",
+    "description": "Un excelente producto de la categoría Libros. Poco uso, en muy buen estado.",
+    "category": "Libros",
     "available": false,
-    "price": "$41.000",
     "images": [
       "https://picsum.photos/seed/38a/400/400",
       "https://picsum.photos/seed/38b/400/400",
       "https://picsum.photos/seed/38c/400/400"
-    ]
+    ],
+    "price": "$37.000"
   },
   {
     "id": 39,
-    "name": "Item 39 de Deporte",
-    "description": "Un excelente producto de la categoría Deporte. Poco uso, en muy buen estado.",
-    "category": "Deporte",
+    "name": "Item 39 de Electrodomésticos",
+    "description": "Un excelente producto de la categoría Electrodomésticos. Poco uso, en muy buen estado.",
+    "category": "Electrodomésticos",
     "available": false,
-    "price": "$42.000",
     "images": [
       "https://picsum.photos/seed/39a/400/400",
       "https://picsum.photos/seed/39b/400/400",
       "https://picsum.photos/seed/39c/400/400"
-    ]
+    ],
+    "price": "$47.000"
   },
   {
     "id": 40,
-    "name": "Item 40 de Deporte",
-    "description": "Un excelente producto de la categoría Deporte. Poco uso, en muy buen estado.",
-    "category": "Deporte",
+    "name": "Item 40 de Juegos de Mesa",
+    "description": "Un excelente producto de la categoría Juegos de Mesa. Poco uso, en muy buen estado.",
+    "category": "Juegos de Mesa",
     "available": true,
-    "price": "$39.000",
     "images": [
       "https://picsum.photos/seed/40a/400/400",
       "https://picsum.photos/seed/40b/400/400",
       "https://picsum.photos/seed/40c/400/400"
-    ]
+    ],
+    "price": "$19.000"
   }
 ]

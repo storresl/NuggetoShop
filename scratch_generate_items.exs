@@ -1,5 +1,14 @@
 defmodule ItemGenerator do
-  @categories ["Camping", "Deporte", "Videojuegos", "Juegos de Mesa", "Libros", "Música"]
+  @categories [
+    "Camping",
+    "Deporte",
+    "Videojuegos",
+    "Juegos de Mesa",
+    "Libros",
+    "Música",
+    "Muebles",
+    "Electrodomésticos"
+  ]
 
   def generate(count \\ 40) do
     Enum.map(1..count, fn id ->
