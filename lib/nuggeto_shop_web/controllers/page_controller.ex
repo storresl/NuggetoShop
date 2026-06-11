@@ -13,4 +13,23 @@ defmodule NuggetoShopWeb.PageController do
       search_query: search_query
     )
   end
+
+  def reserve(conn, %{"id" => id}) do
+    item = NuggetoShop.Catalog.get_item(id)
+
+    if item && Map.get(item, :status, "available") == "available" do
+      NuggetoShop.Catalog.reserve(id)
+
+      whatsapp_msg =
+        URI.encode(
+          "¡Hola! Acabo de reservar el producto: #{item.name} en la tienda. Me gustaría coordinar el pago."
+        )
+
+      redirect_url = "https://wa.me/56978906532?text=#{whatsapp_msg}"
+
+      redirect(conn, external: redirect_url)
+    else
+      redirect(conn, to: ~p"/")
+    end
+  end
 end

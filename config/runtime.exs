@@ -16,6 +16,19 @@ import Config
 #
 # Alternatively, you can use `mix phx.gen.release` to generate a `bin/server`
 # script that automatically sets the env var above.
+
+if File.exists?(".env") do
+  File.stream!(".env")
+  |> Stream.map(&String.trim/1)
+  |> Stream.reject(fn line -> line == "" or String.starts_with?(line, "#") end)
+  |> Enum.each(fn line ->
+    [key, val] = String.split(line, "=", parts: 2)
+    System.put_env(key, val)
+  end)
+end
+
+config :nuggeto_shop, :admin_password, System.get_env("ADMIN_PASSWORD") || "nuggeto2026"
+
 if System.get_env("PHX_SERVER") do
   config :nuggeto_shop, NuggetoShopWeb.Endpoint, server: true
 end

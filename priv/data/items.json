@@ -2,6 +2,7 @@
   {
     "id": 1,
     "name": "Item 1 de Libros",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Libros. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Libros",
     "available": false,
@@ -10,11 +11,13 @@
       "https://picsum.photos/seed/1b/400/400",
       "https://picsum.photos/seed/1c/400/400"
     ],
-    "price": "$14.000"
+    "price": "$14.000",
+    "reserved_until": null
   },
   {
     "id": 2,
     "name": "Item 2 de Libros",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Libros. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Libros",
     "available": true,
@@ -23,11 +26,13 @@
       "https://picsum.photos/seed/2b/400/400",
       "https://picsum.photos/seed/2c/400/400"
     ],
-    "price": "$46.000"
+    "price": "$46.000",
+    "reserved_until": null
   },
   {
     "id": 3,
     "name": "Item 3 de Juegos de Mesa",
+    "status": "reserved",
     "description": "Este es un excelente producto de la categoría Juegos de Mesa. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Juegos de Mesa",
     "available": false,
@@ -36,11 +41,13 @@
       "https://picsum.photos/seed/3b/400/400",
       "https://picsum.photos/seed/3c/400/400"
     ],
-    "price": "$41.000"
+    "price": "$41.000",
+    "reserved_until": 1781224617096
   },
   {
     "id": 4,
     "name": "Item 4 de Muebles",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Muebles. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Muebles",
     "available": false,
@@ -49,11 +56,13 @@
       "https://picsum.photos/seed/4b/400/400",
       "https://picsum.photos/seed/4c/400/400"
     ],
-    "price": "$24.000"
+    "price": "$24.000",
+    "reserved_until": null
   },
   {
     "id": 5,
     "name": "Item 5 de Juegos de Mesa",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Juegos de Mesa. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Juegos de Mesa",
     "available": true,
@@ -62,11 +71,13 @@
       "https://picsum.photos/seed/5b/400/400",
       "https://picsum.photos/seed/5c/400/400"
     ],
-    "price": "$16.000"
+    "price": "$16.000",
+    "reserved_until": null
   },
   {
     "id": 6,
     "name": "Item 6 de Deporte",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Deporte. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Deporte",
     "available": true,
@@ -75,11 +86,13 @@
       "https://picsum.photos/seed/6b/400/400",
       "https://picsum.photos/seed/6c/400/400"
     ],
-    "price": "$43.000"
+    "price": "$43.000",
+    "reserved_until": null
   },
   {
     "id": 7,
     "name": "Item 7 de Deporte",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Deporte. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Deporte",
     "available": true,
@@ -88,11 +101,13 @@
       "https://picsum.photos/seed/7b/400/400",
       "https://picsum.photos/seed/7c/400/400"
     ],
-    "price": "$43.000"
+    "price": "$43.000",
+    "reserved_until": null
   },
   {
     "id": 8,
     "name": "Item 8 de Música",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Música. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Música",
     "available": true,
@@ -101,11 +116,13 @@
       "https://picsum.photos/seed/8b/400/400",
       "https://picsum.photos/seed/8c/400/400"
     ],
-    "price": "$17.000"
+    "price": "$17.000",
+    "reserved_until": null
   },
   {
     "id": 9,
     "name": "Item 9 de Muebles",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Muebles. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Muebles",
     "available": true,
@@ -114,11 +131,13 @@
       "https://picsum.photos/seed/9b/400/400",
       "https://picsum.photos/seed/9c/400/400"
     ],
-    "price": "$17.000"
+    "price": "$17.000",
+    "reserved_until": null
   },
   {
     "id": 10,
     "name": "Item 10 de Muebles",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Muebles. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Muebles",
     "available": true,
@@ -127,11 +146,13 @@
       "https://picsum.photos/seed/10b/400/400",
       "https://picsum.photos/seed/10c/400/400"
     ],
-    "price": "$11.000"
+    "price": "$11.000",
+    "reserved_until": null
   },
   {
     "id": 11,
     "name": "Item 11 de Libros",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Libros. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Libros",
     "available": true,
@@ -140,11 +161,13 @@
       "https://picsum.photos/seed/11b/400/400",
       "https://picsum.photos/seed/11c/400/400"
     ],
-    "price": "$20.000"
+    "price": "$20.000",
+    "reserved_until": null
   },
   {
     "id": 12,
     "name": "Item 12 de Electrodomésticos",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Electrodomésticos. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Electrodomésticos",
     "available": true,
@@ -153,11 +176,13 @@
       "https://picsum.photos/seed/12b/400/400",
       "https://picsum.photos/seed/12c/400/400"
     ],
-    "price": "$35.000"
+    "price": "$35.000",
+    "reserved_until": null
   },
   {
     "id": 13,
     "name": "Item 13 de Muebles",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Muebles. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Muebles",
     "available": false,
@@ -166,11 +191,13 @@
       "https://picsum.photos/seed/13b/400/400",
       "https://picsum.photos/seed/13c/400/400"
     ],
-    "price": "$34.000"
+    "price": "$34.000",
+    "reserved_until": null
   },
   {
     "id": 14,
     "name": "Item 14 de Juegos de Mesa",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Juegos de Mesa. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Juegos de Mesa",
     "available": true,
@@ -179,11 +206,13 @@
       "https://picsum.photos/seed/14b/400/400",
       "https://picsum.photos/seed/14c/400/400"
     ],
-    "price": "$19.000"
+    "price": "$19.000",
+    "reserved_until": null
   },
   {
     "id": 15,
     "name": "Item 15 de Música",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Música. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Música",
     "available": true,
@@ -192,11 +221,13 @@
       "https://picsum.photos/seed/15b/400/400",
       "https://picsum.photos/seed/15c/400/400"
     ],
-    "price": "$20.000"
+    "price": "$20.000",
+    "reserved_until": null
   },
   {
     "id": 16,
     "name": "Item 16 de Deporte",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Deporte. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Deporte",
     "available": true,
@@ -205,11 +236,13 @@
       "https://picsum.photos/seed/16b/400/400",
       "https://picsum.photos/seed/16c/400/400"
     ],
-    "price": "$49.000"
+    "price": "$49.000",
+    "reserved_until": null
   },
   {
     "id": 17,
     "name": "Item 17 de Videojuegos",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Videojuegos. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Videojuegos",
     "available": false,
@@ -218,11 +251,13 @@
       "https://picsum.photos/seed/17b/400/400",
       "https://picsum.photos/seed/17c/400/400"
     ],
-    "price": "$19.000"
+    "price": "$19.000",
+    "reserved_until": null
   },
   {
     "id": 18,
     "name": "Item 18 de Videojuegos",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Videojuegos. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Videojuegos",
     "available": true,
@@ -231,11 +266,13 @@
       "https://picsum.photos/seed/18b/400/400",
       "https://picsum.photos/seed/18c/400/400"
     ],
-    "price": "$40.000"
+    "price": "$40.000",
+    "reserved_until": null
   },
   {
     "id": 19,
     "name": "Item 19 de Libros",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Libros. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Libros",
     "available": true,
@@ -244,11 +281,13 @@
       "https://picsum.photos/seed/19b/400/400",
       "https://picsum.photos/seed/19c/400/400"
     ],
-    "price": "$26.000"
+    "price": "$26.000",
+    "reserved_until": null
   },
   {
     "id": 20,
     "name": "Item 20 de Música",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Música. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Música",
     "available": true,
@@ -257,11 +296,13 @@
       "https://picsum.photos/seed/20b/400/400",
       "https://picsum.photos/seed/20c/400/400"
     ],
-    "price": "$43.000"
+    "price": "$43.000",
+    "reserved_until": null
   },
   {
     "id": 21,
     "name": "Item 21 de Muebles",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Muebles. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Muebles",
     "available": true,
@@ -270,11 +311,13 @@
       "https://picsum.photos/seed/21b/400/400",
       "https://picsum.photos/seed/21c/400/400"
     ],
-    "price": "$38.000"
+    "price": "$38.000",
+    "reserved_until": null
   },
   {
     "id": 22,
     "name": "Item 22 de Juegos de Mesa",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Juegos de Mesa. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Juegos de Mesa",
     "available": true,
@@ -283,11 +326,13 @@
       "https://picsum.photos/seed/22b/400/400",
       "https://picsum.photos/seed/22c/400/400"
     ],
-    "price": "$30.000"
+    "price": "$30.000",
+    "reserved_until": null
   },
   {
     "id": 23,
     "name": "Item 23 de Música",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Música. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Música",
     "available": true,
@@ -296,11 +341,13 @@
       "https://picsum.photos/seed/23b/400/400",
       "https://picsum.photos/seed/23c/400/400"
     ],
-    "price": "$31.000"
+    "price": "$31.000",
+    "reserved_until": null
   },
   {
     "id": 24,
     "name": "Item 24 de Música",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Música. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Música",
     "available": true,
@@ -309,11 +356,13 @@
       "https://picsum.photos/seed/24b/400/400",
       "https://picsum.photos/seed/24c/400/400"
     ],
-    "price": "$6.000"
+    "price": "$6.000",
+    "reserved_until": null
   },
   {
     "id": 25,
     "name": "Item 25 de Música",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Música. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Música",
     "available": true,
@@ -322,11 +371,13 @@
       "https://picsum.photos/seed/25b/400/400",
       "https://picsum.photos/seed/25c/400/400"
     ],
-    "price": "$41.000"
+    "price": "$41.000",
+    "reserved_until": null
   },
   {
     "id": 26,
     "name": "Item 26 de Juegos de Mesa",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Juegos de Mesa. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Juegos de Mesa",
     "available": true,
@@ -335,11 +386,13 @@
       "https://picsum.photos/seed/26b/400/400",
       "https://picsum.photos/seed/26c/400/400"
     ],
-    "price": "$39.000"
+    "price": "$39.000",
+    "reserved_until": null
   },
   {
     "id": 27,
     "name": "Item 27 de Videojuegos",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Videojuegos. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Videojuegos",
     "available": true,
@@ -348,11 +401,13 @@
       "https://picsum.photos/seed/27b/400/400",
       "https://picsum.photos/seed/27c/400/400"
     ],
-    "price": "$22.000"
+    "price": "$22.000",
+    "reserved_until": null
   },
   {
     "id": 28,
     "name": "Item 28 de Electrodomésticos",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Electrodomésticos. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Electrodomésticos",
     "available": false,
@@ -361,11 +416,13 @@
       "https://picsum.photos/seed/28b/400/400",
       "https://picsum.photos/seed/28c/400/400"
     ],
-    "price": "$31.000"
+    "price": "$31.000",
+    "reserved_until": null
   },
   {
     "id": 29,
     "name": "Item 29 de Muebles",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Muebles. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Muebles",
     "available": false,
@@ -374,11 +431,13 @@
       "https://picsum.photos/seed/29b/400/400",
       "https://picsum.photos/seed/29c/400/400"
     ],
-    "price": "$21.000"
+    "price": "$21.000",
+    "reserved_until": null
   },
   {
     "id": 30,
     "name": "Item 30 de Libros",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Libros. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Libros",
     "available": true,
@@ -387,11 +446,13 @@
       "https://picsum.photos/seed/30b/400/400",
       "https://picsum.photos/seed/30c/400/400"
     ],
-    "price": "$27.000"
+    "price": "$27.000",
+    "reserved_until": null
   },
   {
     "id": 31,
     "name": "Item 31 de Electrodomésticos",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Electrodomésticos. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Electrodomésticos",
     "available": true,
@@ -400,11 +461,13 @@
       "https://picsum.photos/seed/31b/400/400",
       "https://picsum.photos/seed/31c/400/400"
     ],
-    "price": "$38.000"
+    "price": "$38.000",
+    "reserved_until": null
   },
   {
     "id": 32,
     "name": "Item 32 de Videojuegos",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Videojuegos. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Videojuegos",
     "available": false,
@@ -413,11 +476,13 @@
       "https://picsum.photos/seed/32b/400/400",
       "https://picsum.photos/seed/32c/400/400"
     ],
-    "price": "$11.000"
+    "price": "$11.000",
+    "reserved_until": null
   },
   {
     "id": 33,
     "name": "Item 33 de Muebles",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Muebles. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Muebles",
     "available": true,
@@ -426,11 +491,13 @@
       "https://picsum.photos/seed/33b/400/400",
       "https://picsum.photos/seed/33c/400/400"
     ],
-    "price": "$27.000"
+    "price": "$27.000",
+    "reserved_until": null
   },
   {
     "id": 34,
     "name": "Item 34 de Videojuegos",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Videojuegos. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Videojuegos",
     "available": false,
@@ -439,11 +506,13 @@
       "https://picsum.photos/seed/34b/400/400",
       "https://picsum.photos/seed/34c/400/400"
     ],
-    "price": "$46.000"
+    "price": "$46.000",
+    "reserved_until": null
   },
   {
     "id": 35,
     "name": "Item 35 de Deporte",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Deporte. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Deporte",
     "available": false,
@@ -452,11 +521,13 @@
       "https://picsum.photos/seed/35b/400/400",
       "https://picsum.photos/seed/35c/400/400"
     ],
-    "price": "$32.000"
+    "price": "$32.000",
+    "reserved_until": null
   },
   {
     "id": 36,
     "name": "Item 36 de Electrodomésticos",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Electrodomésticos. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Electrodomésticos",
     "available": true,
@@ -465,11 +536,13 @@
       "https://picsum.photos/seed/36b/400/400",
       "https://picsum.photos/seed/36c/400/400"
     ],
-    "price": "$40.000"
+    "price": "$40.000",
+    "reserved_until": null
   },
   {
     "id": 37,
     "name": "Item 37 de Música",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Música. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Música",
     "available": false,
@@ -478,11 +551,13 @@
       "https://picsum.photos/seed/37b/400/400",
       "https://picsum.photos/seed/37c/400/400"
     ],
-    "price": "$42.000"
+    "price": "$42.000",
+    "reserved_until": null
   },
   {
     "id": 38,
     "name": "Item 38 de Deporte",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Deporte. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Deporte",
     "available": true,
@@ -491,11 +566,13 @@
       "https://picsum.photos/seed/38b/400/400",
       "https://picsum.photos/seed/38c/400/400"
     ],
-    "price": "$48.000"
+    "price": "$48.000",
+    "reserved_until": null
   },
   {
     "id": 39,
     "name": "Item 39 de Videojuegos",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Videojuegos. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Videojuegos",
     "available": true,
@@ -504,11 +581,13 @@
       "https://picsum.photos/seed/39b/400/400",
       "https://picsum.photos/seed/39c/400/400"
     ],
-    "price": "$9.000"
+    "price": "$9.000",
+    "reserved_until": null
   },
   {
     "id": 40,
     "name": "Item 40 de Camping",
+    "status": "available",
     "description": "Este es un excelente producto de la categoría Camping. Ha tenido poco uso y se encuentra en muy buen estado de conservación.\n\nPerfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!\n\nSe entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.\n",
     "category": "Camping",
     "available": true,
@@ -517,6 +596,7 @@
       "https://picsum.photos/seed/40b/400/400",
       "https://picsum.photos/seed/40c/400/400"
     ],
-    "price": "$42.000"
+    "price": "$42.000",
+    "reserved_until": null
   }
 ]

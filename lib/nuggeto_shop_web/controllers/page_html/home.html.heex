@@ -74,7 +74,10 @@
     <%= for item <- @items do %>
       <div class={[
         "group rounded-2xl border border-gray-100 bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col",
-        if(not item.available, do: "opacity-60 grayscale", else: "")
+        if(Map.get(item, :status, "available") != "available",
+          do: "opacity-60 grayscale",
+          else: ""
+        )
       ]}>
         <!-- Clickable Area -->
         <div
@@ -103,9 +106,18 @@
               <h2 class="text-lg font-bold text-gray-900 leading-tight group-hover/card:text-[#F97316] transition-colors">
                 {item.name}
               </h2>
-              <span class="inline-block bg-[#F97316]/10 text-[#F97316] font-bold px-2 py-1 rounded text-sm whitespace-nowrap ml-2">
-                {item.price}
-              </span>
+              <div class="flex items-center gap-2 flex-wrap justify-end">
+                <%= case Map.get(item, :status, "available") do %>
+                  <% "reserved" -> %>
+                    <span class="inline-block bg-orange-100 text-orange-800 font-bold px-2 py-1 rounded text-sm whitespace-nowrap">Reservado</span>
+                  <% "sold" -> %>
+                    <span class="inline-block bg-gray-200 text-gray-800 font-bold px-2 py-1 rounded text-sm whitespace-nowrap">Vendido</span>
+                  <% _ -> %>
+                <% end %>
+                <span class="inline-block bg-[#F97316]/10 text-[#F97316] font-bold px-2 py-1 rounded text-sm whitespace-nowrap">
+                  {item.price}
+                </span>
+              </div>
             </div>
 
             <p class="text-gray-600 text-sm flex-grow line-clamp-3">
@@ -116,31 +128,25 @@
 
         <!-- Action Buttons -->
         <div class="p-5 pt-4">
-          <%= if item.available do %>
-            <% whatsapp_msg =
-              URI.encode("¡Hola! Me interesa el producto: #{item.name} de Almacén Don Nuggeto.")
-
-            price_int = String.replace(item.price, ~r/\D/, "") %>
-            <div class="flex flex-col gap-3">
-              <a
-                href={"https://wa.me/56978906532?text=#{whatsapp_msg}"}
-                target="_blank"
-                class="block w-full text-center bg-[#25D366] hover:bg-[#128C7E] text-white font-semibold py-2.5 rounded-xl transition-colors shadow-sm flex items-center justify-center gap-2"
-              >
-                <.icon name="hero-chat-bubble-oval-left-ellipsis" class="w-5 h-5" /> WhatsApp
-              </a>
-              <a
-                href={"https://fintoc.me/sebatorres/#{price_int}"}
-                target="_blank"
-                class="block w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2.5 rounded-xl transition-colors shadow-sm flex items-center justify-center gap-2"
-              >
-                <.icon name="hero-banknotes" class="w-5 h-5" /> Pagar con Fintoc
-              </a>
-            </div>
-          <% else %>
-            <div class="block w-full text-center bg-gray-100 text-gray-500 font-semibold py-2.5 rounded-xl cursor-not-allowed">
-              Vendido
-            </div>
+          <%= case Map.get(item, :status, "available") do %>
+            <% "available" -> %>
+              <div class="flex flex-col gap-3">
+                <button
+                  type="button"
+                  onclick={"document.getElementById('modal-#{item.id}').showModal()"}
+                  class="w-full text-center bg-gray-900 hover:bg-gray-800 text-white font-semibold py-2.5 rounded-xl transition-colors shadow-sm flex items-center justify-center gap-2"
+                >
+                  <.icon name="hero-eye" class="w-5 h-5" /> Ver más
+                </button>
+              </div>
+            <% "reserved" -> %>
+              <div class="block w-full text-center bg-orange-100 text-orange-800 font-semibold py-2.5 rounded-xl cursor-not-allowed">
+                Reservado
+              </div>
+            <% "sold" -> %>
+              <div class="block w-full text-center bg-gray-100 text-gray-500 font-semibold py-2.5 rounded-xl cursor-not-allowed">
+                Vendido
+              </div>
           <% end %>
         </div>
 
@@ -168,52 +174,69 @@
             </div>
 
             <!-- Modal Details -->
-            <div class="w-full md:w-1/2 p-6 md:p-8 flex flex-col h-full overflow-hidden">
+            <div class="w-full md:w-1/2 p-6 md:p-8 flex flex-col overflow-y-auto md:max-h-[90vh]">
               <div class="flex justify-between items-start mb-6 shrink-0 mt-2">
                 <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 leading-tight pr-8">
                   {item.name}
                 </h2>
-                <span class="inline-block bg-[#FCD34D] text-gray-900 shadow-sm font-bold px-4 py-2 rounded-xl text-xl whitespace-nowrap ml-4">
-                  {item.price}
-                </span>
+                <div class="flex items-center flex-col md:flex-row gap-2 shrink-0">
+                  <%= case Map.get(item, :status, "available") do %>
+                    <% "reserved" -> %>
+                      <span class="inline-block bg-orange-100 text-orange-800 shadow-sm font-bold px-4 py-2 rounded-xl text-xl whitespace-nowrap">Reservado</span>
+                    <% "sold" -> %>
+                      <span class="inline-block bg-gray-200 text-gray-800 shadow-sm font-bold px-4 py-2 rounded-xl text-xl whitespace-nowrap">Vendido</span>
+                    <% _ -> %>
+                  <% end %>
+                  <span class="inline-block bg-[#FCD34D] text-gray-900 shadow-sm font-bold px-4 py-2 rounded-xl text-xl whitespace-nowrap">
+                    {item.price}
+                  </span>
+                </div>
               </div>
 
-              <div class="flex-grow overflow-y-auto mb-6 pr-2">
+              <div class="mb-6 pr-2">
                 <p class="text-gray-700 whitespace-pre-line leading-relaxed text-base md:text-lg">
                   {item.description}
                 </p>
               </div>
 
-              <!-- Modal Actions -->
               <div class="mt-auto pt-6 border-t border-gray-100 shrink-0">
-                <%= if item.available do %>
-                  <% whatsapp_msg =
-                    URI.encode(
-                      "¡Hola! Me interesa el producto: #{item.name} de Almacén Don Nuggeto."
-                    )
-
-                  price_int = String.replace(item.price, ~r/\D/, "") %>
-                  <div class="flex flex-col gap-4">
-                    <a
-                      href={"https://wa.me/56978906532?text=#{whatsapp_msg}"}
-                      target="_blank"
-                      class="block w-full text-center bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-3.5 rounded-xl transition-colors shadow-sm flex items-center justify-center gap-2 text-lg"
-                    >
-                      <.icon name="hero-chat-bubble-oval-left-ellipsis" class="w-6 h-6" />
-                      Contactar por WhatsApp
-                    </a>
-                    <a
-                      href={"https://fintoc.me/sebatorres/#{price_int}"}
-                      target="_blank"
-                      class="block w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 rounded-xl transition-colors shadow-sm flex items-center justify-center gap-2 text-lg"
-                    >
-                      <.icon name="hero-banknotes" class="w-6 h-6" /> Pagar con Fintoc
-                    </a>
-                  </div>
-                <% else %>
-                  <div class="block w-full text-center bg-gray-100 text-gray-500 font-bold py-3.5 rounded-xl cursor-not-allowed text-lg">
-                    Vendido
-                  </div>
+                <%= case Map.get(item, :status, "available") do %>
+                  <% "available" -> %>
+                    <% price_int = String.replace(item.price, ~r/\D/, "") %>
+                    <div class="flex flex-col gap-4">
+                      <div class="flex flex-col items-center">
+                        <form action={"/reserve/#{item.id}"} method="post" class="w-full">
+                          <input type="hidden" name="_csrf_token" value={get_csrf_token()} />
+                          <button
+                            type="submit"
+                            class="w-full text-center bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-3.5 rounded-xl transition-colors shadow-sm flex items-center justify-center gap-2 text-lg"
+                          >
+                            <.icon name="hero-chat-bubble-oval-left-ellipsis" class="w-6 h-6" />
+                            Contactar por WhatsApp
+                          </button>
+                        </form>
+                        <p class="text-sm text-gray-500 mt-2 text-center font-medium">Al contactar por WhatsApp reservas el producto por 2h</p>
+                      </div>
+                      
+                      <div class="flex flex-col items-center pt-2">
+                        <a
+                          href={"https://fintoc.me/sebatorres/#{price_int}"}
+                          target="_blank"
+                          class="block w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 rounded-xl transition-colors shadow-sm flex items-center justify-center gap-2 text-lg"
+                        >
+                          <.icon name="hero-banknotes" class="w-6 h-6" /> Pagar con transferencia
+                        </a>
+                        <p class="text-sm text-gray-500 mt-2 text-center font-medium">Puedes pagar de inmediato, ¡recuerda avisarme por WhatsApp!</p>
+                      </div>
+                    </div>
+                  <% "reserved" -> %>
+                    <div class="block w-full text-center bg-orange-100 text-orange-800 font-bold py-3.5 rounded-xl cursor-not-allowed text-lg">
+                      Reservado
+                    </div>
+                  <% "sold" -> %>
+                    <div class="block w-full text-center bg-gray-100 text-gray-500 font-bold py-3.5 rounded-xl cursor-not-allowed text-lg">
+                      Vendido
+                    </div>
                 <% end %>
               </div>
             </div>
