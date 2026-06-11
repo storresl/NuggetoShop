@@ -8,8 +8,6 @@ defmodule NuggetoShop.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      NuggetoShopWeb.Telemetry,
-      {DNSCluster, query: Application.get_env(:nuggeto_shop, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: NuggetoShop.PubSub},
       # Start a worker by calling: NuggetoShop.Worker.start_link(arg)
       # {NuggetoShop.Worker, arg},
