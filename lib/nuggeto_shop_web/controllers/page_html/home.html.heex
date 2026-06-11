@@ -58,33 +58,46 @@
         "group rounded-2xl border border-gray-100 bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col",
         if(not item.available, do: "opacity-60 grayscale", else: "")
       ]}>
-        <!-- Image Carousel -->
-        <div class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar aspect-[4/3] border-b border-gray-100">
-          <%= for image <- Map.get(item, :images, []) do %>
-            <div class="shrink-0 w-full h-full snap-center relative bg-gray-50">
-              <img
-                src={image}
-                alt={item.name}
-                class="absolute inset-0 w-full h-full object-cover"
-                loading="lazy"
-              />
+        <!-- Clickable Area -->
+        <div
+          class="cursor-pointer flex flex-col flex-grow group/card"
+          onclick={"document.getElementById('modal-#{item.id}').showModal()"}
+        >
+          <!-- Image Carousel -->
+          <div class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar aspect-[4/3] border-b border-gray-100 relative">
+            <div class="absolute inset-0 bg-black/0 group-hover/card:bg-black/5 transition-colors z-10 pointer-events-none">
             </div>
-          <% end %>
-        </div>
-
-        <!-- Card Content -->
-        <div class="p-5 flex flex-col flex-grow">
-          <div class="flex justify-between items-start mb-2">
-            <h2 class="text-lg font-bold text-gray-900 leading-tight">{item.name}</h2>
-            <span class="inline-block bg-[#F97316]/10 text-[#F97316] font-bold px-2 py-1 rounded text-sm whitespace-nowrap ml-2">
-              {item.price}
-            </span>
+            <%= for image <- Map.get(item, :images, []) do %>
+              <div class="shrink-0 w-full h-full snap-center relative bg-gray-50">
+                <img
+                  src={image}
+                  alt={item.name}
+                  class="absolute inset-0 w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+            <% end %>
           </div>
 
-          <p class="text-gray-600 text-sm mb-6 flex-grow line-clamp-3">
-            {item.description}
-          </p>
+          <!-- Card Content -->
+          <div class="p-5 flex flex-col flex-grow pb-2">
+            <div class="flex justify-between items-start mb-2">
+              <h2 class="text-lg font-bold text-gray-900 leading-tight group-hover/card:text-[#F97316] transition-colors">
+                {item.name}
+              </h2>
+              <span class="inline-block bg-[#F97316]/10 text-[#F97316] font-bold px-2 py-1 rounded text-sm whitespace-nowrap ml-2">
+                {item.price}
+              </span>
+            </div>
 
+            <p class="text-gray-600 text-sm flex-grow line-clamp-3">
+              {item.description}
+            </p>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="p-5 pt-4">
           <%= if item.available do %>
             <% whatsapp_msg =
               URI.encode("¡Hola! Me interesa el producto: #{item.name} de Almacén Don Nuggeto.")
@@ -112,6 +125,85 @@
             </div>
           <% end %>
         </div>
+
+        <!-- PDP Modal -->
+        <dialog id={"modal-#{item.id}"} class="modal">
+          <div class="modal-box w-11/12 max-w-4xl p-0 overflow-hidden bg-white shadow-2xl rounded-2xl flex flex-col md:flex-row max-h-[90vh]">
+            <form method="dialog">
+              <button class="btn btn-sm btn-circle btn-ghost absolute right-3 top-3 z-20 bg-white/80 hover:bg-white text-gray-800 shadow-sm border border-gray-200">✕</button>
+            </form>
+
+            <!-- Modal Image Carousel -->
+            <div class="w-full md:w-1/2 bg-gray-100 shrink-0">
+              <div class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar aspect-square md:aspect-auto md:h-full">
+                <%= for image <- Map.get(item, :images, []) do %>
+                  <div class="shrink-0 w-full h-full snap-center relative">
+                    <img
+                      src={image}
+                      alt={item.name}
+                      class="absolute inset-0 w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                <% end %>
+              </div>
+            </div>
+
+            <!-- Modal Details -->
+            <div class="w-full md:w-1/2 p-6 md:p-8 flex flex-col h-full overflow-hidden">
+              <div class="flex justify-between items-start mb-6 shrink-0 mt-2">
+                <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 leading-tight pr-8">
+                  {item.name}
+                </h2>
+                <span class="inline-block bg-[#FCD34D] text-gray-900 shadow-sm font-bold px-4 py-2 rounded-xl text-xl whitespace-nowrap ml-4">
+                  {item.price}
+                </span>
+              </div>
+
+              <div class="flex-grow overflow-y-auto mb-6 pr-2">
+                <p class="text-gray-700 whitespace-pre-line leading-relaxed text-base md:text-lg">
+                  {item.description}
+                </p>
+              </div>
+
+              <!-- Modal Actions -->
+              <div class="mt-auto pt-6 border-t border-gray-100 shrink-0">
+                <%= if item.available do %>
+                  <% whatsapp_msg =
+                    URI.encode(
+                      "¡Hola! Me interesa el producto: #{item.name} de Almacén Don Nuggeto."
+                    )
+
+                  price_int = String.replace(item.price, ~r/\D/, "") %>
+                  <div class="flex flex-col gap-4">
+                    <a
+                      href={"https://wa.me/56978906532?text=#{whatsapp_msg}"}
+                      target="_blank"
+                      class="block w-full text-center bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-3.5 rounded-xl transition-colors shadow-sm flex items-center justify-center gap-2 text-lg"
+                    >
+                      <.icon name="hero-chat-bubble-oval-left-ellipsis" class="w-6 h-6" />
+                      Contactar por WhatsApp
+                    </a>
+                    <a
+                      href={"https://fintoc.me/sebatorres/#{price_int}"}
+                      target="_blank"
+                      class="block w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 rounded-xl transition-colors shadow-sm flex items-center justify-center gap-2 text-lg"
+                    >
+                      <.icon name="hero-banknotes" class="w-6 h-6" /> Pagar con Fintoc
+                    </a>
+                  </div>
+                <% else %>
+                  <div class="block w-full text-center bg-gray-100 text-gray-500 font-bold py-3.5 rounded-xl cursor-not-allowed text-lg">
+                    Vendido
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+          <form method="dialog" class="modal-backdrop">
+            <button>cerrar</button>
+          </form>
+        </dialog>
       </div>
     <% end %>
   </div>

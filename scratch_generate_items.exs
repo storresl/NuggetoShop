@@ -18,8 +18,13 @@ defmodule ItemGenerator do
         id: id,
         name: "Item #{id} de #{category}",
         price: "$#{Enum.random(5..50)}.000",
-        description:
-          "Un excelente producto de la categoría #{category}. Poco uso, en muy buen estado.",
+        description: """
+        Este es un excelente producto de la categoría #{category}. Ha tenido poco uso y se encuentra en muy buen estado de conservación.
+
+        Perfecto para quienes buscan calidad y durabilidad sin pagar el precio de un artículo nuevo. Lo vendo únicamente por motivo de mudanza, ¡aprovecha esta oportunidad!
+
+        Se entrega limpio y probado. Para más detalles, no dudes en contactarme por WhatsApp.
+        """,
         images: [
           "https://picsum.photos/seed/#{id}a/400/400",
           "https://picsum.photos/seed/#{id}b/400/400",
