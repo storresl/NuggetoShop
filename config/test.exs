@@ -1,5 +1,11 @@
 import Config
 
+config :nuggeto_shop, NuggetoShop.Repo,
+  database: "nuggeto_shop_test#{System.get_env("MIX_TEST_PARTITION")}",
+  hostname: "localhost",
+  pool: Ecto.Adapters.SQL.Sandbox,
+  pool_size: System.schedulers_online() * 2
+
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
 config :nuggeto_shop, NuggetoShopWeb.Endpoint,

@@ -1,8 +1,10 @@
 defmodule NuggetoShop.Catalog do
   use GenServer
   require Logger
+  import Ecto.Query
+  alias NuggetoShop.Repo
+  alias NuggetoShop.Catalog.Item
 
-  @file_path "priv/data/items.json"
   # 2 hours in ms
   @reservation_time_ms 2 * 60 * 60 * 1000
 
@@ -13,11 +15,36 @@ defmodule NuggetoShop.Catalog do
   end
 
   def list_items(params \\ %{}) do
-    GenServer.call(__MODULE__, {:list_items, params})
+    query = from i in Item, order_by: [asc: i.id]
+    
+    query = 
+      if category = Map.get(params, "category") do
+        if category == "Todo" do
+          query
+        else
+          from i in query, where: i.category == ^category
+        end
+      else
+        query
+      end
+
+    query = 
+      if search = Map.get(params, "q") do
+        if search == "" do
+          query
+        else
+          search_term = "%#{String.downcase(search)}%"
+          from i in query, where: ilike(i.name, ^search_term) or ilike(i.description, ^search_term)
+        end
+      else
+        query
+      end
+
+    Repo.all(query)
   end
 
   def get_item(id) do
-    GenServer.call(__MODULE__, {:get_item, id})
+    Repo.get(Item, id)
   end
 
   def reserve(id) do
@@ -25,143 +52,98 @@ defmodule NuggetoShop.Catalog do
   end
 
   def mark_sold(id) do
-    GenServer.cast(__MODULE__, {:update_status, id, "sold"})
+    GenServer.cast(__MODULE__, {:update_item, id, %{status: "sold", reserved_until: nil}})
   end
 
   def mark_available(id) do
-    GenServer.cast(__MODULE__, {:update_status, id, "available"})
+    GenServer.cast(__MODULE__, {:update_item, id, %{status: "available", reserved_until: nil}})
+  end
+
+  def update_item(id, updates) do
+    GenServer.cast(__MODULE__, {:update_item, id, updates})
   end
 
   # --- Server Callbacks ---
 
   @impl true
   def init(_state) do
-    items = load_from_disk()
-
     # Process initial timers and expire outdated reservations
+    # We use send_after so we don't block the startup querying the DB immediately
+    # before Ecto is fully ready, wait we can query because we are after Repo in supervision tree
+    send(self(), :startup_timers)
+    {:ok, %{}}
+  end
+
+  @impl true
+  def handle_info(:startup_timers, state) do
     now = System.system_time(:millisecond)
+    reserved_items = Repo.all(from i in Item, where: i.status == "reserved")
 
-    items =
-      Enum.map(items, fn item ->
-        case item do
-          %{status: "reserved", reserved_until: reserved_until} ->
-            if now >= reserved_until do
-              %{item | status: "available", reserved_until: nil}
-            else
-              # Schedule expiration for remaining time
-              Process.send_after(self(), {:expire_reservation, item.id}, reserved_until - now)
-              item
-            end
-
-          _ ->
-            # Default missing statuses to available
-            item |> Map.put_new(:status, "available") |> Map.put_new(:reserved_until, nil)
-        end
-      end)
-
-    persist_to_disk(items)
-    {:ok, items}
-  end
-
-  @impl true
-  def handle_call({:list_items, params}, _from, items) do
-    category = Map.get(params, "category")
-    query = Map.get(params, "q")
-
-    filtered_items =
-      items
-      |> filter_by_category(category)
-      |> filter_by_query(query)
-
-    {:reply, filtered_items, items}
-  end
-
-  @impl true
-  def handle_call({:get_item, id}, _from, items) do
-    id_int = if is_binary(id), do: String.to_integer(id), else: id
-    item = Enum.find(items, &(&1.id == id_int))
-    {:reply, item, items}
-  end
-
-  @impl true
-  def handle_cast({:reserve, id}, items) do
-    id_int = if is_binary(id), do: String.to_integer(id), else: id
-    now = System.system_time(:millisecond)
-    reserved_until = now + @reservation_time_ms
-
-    new_items =
-      Enum.map(items, fn item ->
-        if item.id == id_int and Map.get(item, :status, "available") == "available" do
-          Process.send_after(self(), {:expire_reservation, item.id}, @reservation_time_ms)
-          %{item | status: "reserved", reserved_until: reserved_until}
-        else
+    Enum.each(reserved_items, fn item ->
+      if item.reserved_until do
+        if now >= item.reserved_until do
           item
-        end
-      end)
-
-    persist_to_disk(new_items)
-    {:noreply, new_items}
-  end
-
-  @impl true
-  def handle_cast({:update_status, id, new_status}, items) do
-    id_int = if is_binary(id), do: String.to_integer(id), else: id
-
-    new_items =
-      Enum.map(items, fn item ->
-        if item.id == id_int do
-          %{item | status: new_status, reserved_until: nil}
+          |> Item.changeset(%{status: "available", reserved_until: nil})
+          |> Repo.update()
         else
-          item
+          Process.send_after(self(), {:expire_reservation, item.id}, item.reserved_until - now)
         end
-      end)
-
-    persist_to_disk(new_items)
-    {:noreply, new_items}
-  end
-
-  @impl true
-  def handle_info({:expire_reservation, id}, items) do
-    new_items =
-      Enum.map(items, fn item ->
-        if item.id == id and item.status == "reserved" do
-          Logger.info("Reservation expired for item #{id}")
-          %{item | status: "available", reserved_until: nil}
-        else
-          item
-        end
-      end)
-
-    persist_to_disk(new_items)
-    {:noreply, new_items}
-  end
-
-  # --- Internal Helpers ---
-
-  defp load_from_disk do
-    @file_path
-    |> File.read!()
-    |> Jason.decode!(keys: :atoms)
-  end
-
-  defp persist_to_disk(items) do
-    # Pretty print JSON for easy debugging and human readability
-    json = Jason.encode!(items, pretty: true)
-    File.write!(@file_path, json)
-  end
-
-  defp filter_by_category(items, nil), do: items
-  defp filter_by_category(items, "Todo"), do: items
-  defp filter_by_category(items, category), do: Enum.filter(items, &(&1.category == category))
-
-  defp filter_by_query(items, nil), do: items
-  defp filter_by_query(items, ""), do: items
-
-  defp filter_by_query(items, query) do
-    query = String.downcase(query)
-
-    Enum.filter(items, fn item ->
-      String.downcase(item.name) =~ query or String.downcase(item.description) =~ query
+      end
     end)
+    {:noreply, state}
+  end
+
+  @impl true
+  def handle_info({:expire_reservation, id}, state) do
+    if item = Repo.get(Item, id) do
+      if item.status == "reserved" do
+        Logger.info("Reservation expired for item #{id}")
+        item
+        |> Item.changeset(%{status: "available", reserved_until: nil})
+        |> Repo.update()
+      end
+    end
+
+    {:noreply, state}
+  end
+
+  @impl true
+  def handle_cast({:reserve, id}, state) do
+    case Repo.get(Item, id) do
+      %Item{status: "available"} = item ->
+        now = System.system_time(:millisecond)
+        reserved_until = now + @reservation_time_ms
+
+        case item |> Item.changeset(%{status: "reserved", reserved_until: reserved_until}) |> Repo.update() do
+          {:ok, updated_item} ->
+            Process.send_after(self(), {:expire_reservation, updated_item.id}, @reservation_time_ms)
+          {:error, _} -> :ok
+        end
+      _ -> :ok
+    end
+
+    {:noreply, state}
+  end
+
+  @impl true
+  def handle_cast({:update_item, id, updates}, state) do
+    if item = Repo.get(Item, id) do
+      updates_map = Enum.into(updates, %{}, fn {k, v} -> {to_string(k), v} end)
+      
+      updates_map = 
+        if updates_map["status"] do
+          if updates_map["status"] != "reserved" do
+            Map.put(updates_map, "reserved_until", nil)
+          else
+            updates_map
+          end
+        else
+          updates_map
+        end
+
+      Item.changeset(item, updates_map) |> Repo.update()
+    end
+
+    {:noreply, state}
   end
 end

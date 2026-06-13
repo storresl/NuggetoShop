@@ -15,4 +15,17 @@ defmodule NuggetoShopWeb.AdminController do
 
     redirect(conn, to: ~p"/admin")
   end
+
+  def edit(conn, %{"id" => id}) do
+    item = NuggetoShop.Catalog.get_item(id)
+    render(conn, :edit, item: item)
+  end
+
+  def update(conn, %{"id" => id, "item" => item_params}) do
+    NuggetoShop.Catalog.update_item(id, item_params)
+
+    conn
+    |> put_flash(:info, "Producto actualizado correctamente.")
+    |> redirect(to: ~p"/admin")
+  end
 end

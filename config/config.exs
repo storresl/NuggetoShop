@@ -8,6 +8,7 @@
 import Config
 
 config :nuggeto_shop,
+  ecto_repos: [NuggetoShop.Repo],
   generators: [timestamp_type: :utc_datetime]
 
 # Configure the endpoint

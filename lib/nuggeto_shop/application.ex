@@ -8,6 +8,7 @@ defmodule NuggetoShop.Application do
   @impl true
   def start(_type, _args) do
     children = [
+      NuggetoShop.Repo,
       NuggetoShop.Catalog,
       {Phoenix.PubSub, name: NuggetoShop.PubSub},
       # Start a worker by calling: NuggetoShop.Worker.start_link(arg)
