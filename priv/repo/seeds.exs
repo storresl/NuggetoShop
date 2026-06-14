@@ -5,7 +5,7 @@
 alias NuggetoShop.Repo
 alias NuggetoShop.Catalog.Item
 
-json_path = "priv/data/items.json"
+json_path = Application.app_dir(:nuggeto_shop, "priv/data/items.json")
 
 if File.exists?(json_path) do
   items_json = 

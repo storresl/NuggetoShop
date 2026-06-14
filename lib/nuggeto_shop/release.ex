@@ -14,8 +14,11 @@ defmodule NuggetoShop.Release do
 
     for repo <- repos() do
       {:ok, _, _} = Ecto.Migrator.with_repo(repo, fn _repo ->
-        if File.exists?("priv/data/items.json") do
-          Code.eval_file("priv/repo/seeds.exs")
+        json_path = Application.app_dir(:nuggeto_shop, "priv/data/items.json")
+        seed_script = Application.app_dir(:nuggeto_shop, "priv/repo/seeds.exs")
+
+        if File.exists?(json_path) do
+          Code.eval_file(seed_script)
         end
       end)
     end
