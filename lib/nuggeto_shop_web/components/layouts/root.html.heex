@@ -46,13 +46,15 @@
   </head>
   <body class="flex flex-col min-h-screen">
     {@inner_content}
-    <footer class="bg-gray-50 border-t border-gray-200 mt-auto py-8 font-outfit">
-      <div class="max-w-5xl mx-auto px-6 text-center flex flex-col gap-2">
-        <p class="text-gray-600 text-sm font-semibold">Nuggeto Shop - 2026 - All rights reserved</p>
-        <p class="text-gray-500 text-xs">Made with Google Antigravity and Elixir</p>
-        <div class="mt-4 flex justify-center">
-          <a href="/LICENSE.txt" class="text-gray-400 text-xs hover:text-gray-600 transition-colors underline decoration-gray-300 underline-offset-4">Apache License 2.0</a>
-        </div>
+    <footer class="bg-gray-50 border-t border-gray-200 mt-auto py-6 font-outfit">
+      <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-center items-center gap-2 md:gap-3 text-xs">
+        <p class="text-gray-600 font-semibold">Nuggeto Shop - 2026 - All rights reserved</p>
+        <span class="hidden md:inline text-gray-300">•</span>
+        <p class="text-gray-500">Made with Google Antigravity and Elixir</p>
+        <span class="hidden md:inline text-gray-300">•</span>
+        <a href="/LICENSE.txt" class="text-gray-400 hover:text-gray-600 transition-colors underline decoration-gray-300 underline-offset-4">Apache License 2.0</a>
+        <span class="hidden md:inline text-gray-300">•</span>
+        <p class="text-gray-400 font-mono">v<%= Application.spec(:nuggeto_shop, :vsn) %></p>
       </div>
     </footer>
   </body>
