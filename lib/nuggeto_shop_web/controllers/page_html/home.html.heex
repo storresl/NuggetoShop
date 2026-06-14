@@ -87,33 +87,34 @@
           </div>
 
           <!-- Card Content -->
-          <div class="p-5 flex flex-col flex-grow pb-2">
-            <div class="flex justify-between items-start mb-2">
-              <h2 class="text-lg font-bold text-gray-900 leading-tight group-hover/card:text-[#F97316] transition-colors">
+          <div class="p-4 sm:p-5 flex flex-col flex-grow pb-2">
+            <div class="flex flex-col gap-1 mb-2">
+              <h2 class="text-base sm:text-lg font-bold text-gray-900 leading-tight group-hover/card:text-[#F97316] transition-colors line-clamp-2">
                 {item.name}
               </h2>
-              <div class="flex items-center gap-2 flex-wrap justify-end">
-                <%= case Map.get(item, :status, "available") do %>
-                  <% "reserved" -> %>
-                    <span class="inline-block bg-orange-100 text-orange-800 font-bold px-2 py-1 rounded text-sm whitespace-nowrap">Reservado</span>
-                  <% "sold" -> %>
-                    <span class="inline-block bg-gray-200 text-gray-800 font-bold px-2 py-1 rounded text-sm whitespace-nowrap">Vendido</span>
-                  <% _ -> %>
-                <% end %>
-                <div class="flex flex-col items-end justify-center ml-auto h-full">
+              
+              <div class="flex items-center gap-2 flex-wrap mt-1">
+                <div class="flex flex-col">
                   <%= if Map.get(item, :reference_price) do %>
-                    <span class="text-gray-400 line-through text-[11px] leading-tight font-medium">
+                    <span class="text-gray-400 line-through text-[11px] sm:text-xs leading-none font-medium">
                       {item.reference_price}
                     </span>
                   <% end %>
-                  <span class="inline-block bg-[#F97316]/10 text-[#F97316] font-bold px-2 py-1 rounded text-sm whitespace-nowrap mt-1">
+                  <span class="inline-block bg-[#F97316]/10 text-[#F97316] font-bold px-2 py-1 rounded text-sm sm:text-base whitespace-nowrap mt-0.5 w-max">
                     {item.price}
                   </span>
                 </div>
+                <%= case Map.get(item, :status, "available") do %>
+                  <% "reserved" -> %>
+                    <span class="inline-block bg-orange-100 text-orange-800 font-bold px-2 py-1 rounded text-xs whitespace-nowrap mt-auto mb-0.5 ml-auto">Reservado</span>
+                  <% "sold" -> %>
+                    <span class="inline-block bg-gray-200 text-gray-800 font-bold px-2 py-1 rounded text-xs whitespace-nowrap mt-auto mb-0.5 ml-auto">Vendido</span>
+                  <% _ -> %>
+                <% end %>
               </div>
             </div>
 
-            <p class="text-gray-600 text-sm flex-grow line-clamp-3">
+            <p class="hidden md:block text-gray-500 text-sm flex-grow line-clamp-2 mt-2">
               {item.description}
             </p>
           </div>
