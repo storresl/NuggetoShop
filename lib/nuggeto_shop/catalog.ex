@@ -47,6 +47,10 @@ defmodule NuggetoShop.Catalog do
     Repo.get(Item, id)
   end
 
+  def list_categories do
+    Repo.all(from i in Item, select: i.category, distinct: true)
+  end
+
   def reserve(id) do
     GenServer.cast(__MODULE__, {:reserve, id})
   end

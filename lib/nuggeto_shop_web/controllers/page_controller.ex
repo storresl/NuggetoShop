@@ -3,12 +3,14 @@ defmodule NuggetoShopWeb.PageController do
 
   def home(conn, params) do
     items = NuggetoShop.Catalog.list_items(params)
+    categories = NuggetoShop.Catalog.list_categories()
 
     active_category = Map.get(params, "category", "Todo")
     search_query = Map.get(params, "q", "")
 
     render(conn, :home,
       items: items,
+      categories: categories,
       active_category: active_category,
       search_query: search_query
     )
