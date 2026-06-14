@@ -1,5 +1,5 @@
 <!-- Store Header -->
-<header class="bg-slate-900 -mx-4 sm:-mx-6 lg:-mx-8 -mt-20 pt-20 mb-8 overflow-hidden rounded-b-3xl shadow-lg font-outfit">
+<header class="bg-slate-900 mb-8 overflow-hidden rounded-b-3xl shadow-lg font-outfit w-full">
   <div class="px-6 py-6 sm:px-12 sm:py-8 flex justify-center items-center gap-4">
     <!-- Logo -->
     <div class="w-28 sm:w-36 h-28 sm:h-36 flex items-center justify-center shrink-0">
@@ -17,8 +17,10 @@
   </div>
 </header>
 
-<!-- Filters & Search -->
-<div class="max-w-5xl mx-auto mb-8 flex flex-col md:flex-row gap-4 items-center justify-between">
+<!-- Main Content Container with Padding -->
+<main class="px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto w-full">
+  <!-- Filters & Search -->
+  <div class="mb-8 flex flex-col md:flex-row gap-4 items-center justify-between w-full">
   <!-- Categories -->
   <div class="flex gap-2 overflow-x-auto w-full md:w-auto hide-scrollbar pb-2 md:pb-0 items-center">
     <div class="flex gap-2 w-max">
@@ -40,7 +42,7 @@
   </div>
 
   <!-- Search -->
-  <form action="/" method="get" class="w-full md:w-64">
+  <form action="/" method="get" class="w-full md:w-64 shrink-0">
     <input type="hidden" name="category" value={@active_category} />
     <input
       type="search"
@@ -52,9 +54,9 @@
   </form>
 </div>
 
-<!-- Items Grid -->
-<div class="max-w-5xl mx-auto pb-12">
-  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6">
+  <!-- Items Grid -->
+  <div class="pb-12 w-full">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6 w-full">
     <%= for item <- @items do %>
       <div class={[
         "group rounded-2xl border border-gray-100 bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col",
@@ -247,3 +249,4 @@
     <% end %>
   </div>
 </div>
+</main>
