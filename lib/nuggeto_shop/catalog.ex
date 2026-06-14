@@ -77,7 +77,13 @@ defmodule NuggetoShop.Catalog do
   @impl true
   def handle_info(:startup_timers, state) do
     now = System.system_time(:millisecond)
-    reserved_items = Repo.all(from i in Item, where: i.status == "reserved")
+    
+    reserved_items = 
+      try do
+        Repo.all(from i in Item, where: i.status == "reserved")
+      rescue
+        _e in Postgrex.Error -> []
+      end
 
     Enum.each(reserved_items, fn item ->
       if item.reserved_until do
