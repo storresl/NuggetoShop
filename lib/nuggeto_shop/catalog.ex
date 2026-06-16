@@ -55,13 +55,7 @@ defmodule NuggetoShop.Catalog do
     GenServer.cast(__MODULE__, {:reserve, id})
   end
 
-  def mark_sold(id) do
-    GenServer.cast(__MODULE__, {:update_item, id, %{status: "sold", reserved_until: nil}})
-  end
 
-  def mark_available(id) do
-    GenServer.cast(__MODULE__, {:update_item, id, %{status: "available", reserved_until: nil}})
-  end
 
   def update_item(id, updates) do
     GenServer.cast(__MODULE__, {:update_item, id, updates})

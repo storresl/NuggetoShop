@@ -7,10 +7,8 @@ defmodule NuggetoShopWeb.AdminController do
   end
 
   def update_status(conn, %{"id" => id, "status" => status}) do
-    case status do
-      "available" -> NuggetoShop.Catalog.mark_available(id)
-      "sold" -> NuggetoShop.Catalog.mark_sold(id)
-      _ -> :ok
+    if status in ["available", "sold"] do
+      NuggetoShop.Catalog.update_item(id, %{"status" => status})
     end
 
     redirect(conn, to: ~p"/admin")
