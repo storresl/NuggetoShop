@@ -25,7 +25,10 @@ if File.exists?(json_path) do
       status: item_data[:status],
       reserved_until: item_data[:reserved_until]
     })
-    |> Repo.insert!(on_conflict: :replace_all, conflict_target: :id)
+    |> Repo.insert!(
+      on_conflict: {:replace, [:name, :category, :description, :image, :price, :reference_price]},
+      conflict_target: :id
+    )
   end
   
   IO.puts "Successfully migrated data from items.json to Postgres DB!"
