@@ -27,7 +27,17 @@ if File.exists?(".env") do
   end)
 end
 
-config :nuggeto_shop, :admin_password, System.get_env("ADMIN_PASSWORD") || "nuggeto2026"
+admin_password = 
+  System.get_env("ADMIN_PASSWORD") ||
+    if config_env() == :prod do
+      raise """
+      environment variable ADMIN_PASSWORD is missing.
+      """
+    else
+      "nuggeto2026"
+    end
+
+config :nuggeto_shop, :admin_password, admin_password
 
 if System.get_env("PHX_SERVER") do
   config :nuggeto_shop, NuggetoShopWeb.Endpoint, server: true

@@ -20,7 +20,7 @@ defmodule NuggetoShopWeb.Router do
   end
 
   defp require_admin(conn, _opts) do
-    password = Application.get_env(:nuggeto_shop, :admin_password, "nuggeto2026")
+    password = Application.fetch_env!(:nuggeto_shop, :admin_password)
     Plug.BasicAuth.basic_auth(conn, username: "admin", password: password)
   end
 
