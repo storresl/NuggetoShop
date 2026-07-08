@@ -69,8 +69,8 @@
     "reference_price": "$279.990",
     "price": "$200.000",
     "reserved_until": null,
-    "photo_path": "/images/tocadisco_sony.jpg",
-    "reservation_expires_at": null
+    "reservation_expires_at": null,
+    "photo_path": "/images/tocadisco_sony.jpg"
   },
   {
     "id": 7,
@@ -82,8 +82,8 @@
     "reference_price": "$199.990",
     "price": "$150.000",
     "reserved_until": null,
-    "photo_path": "/images/ninja_air_fryer.png",
-    "reservation_expires_at": null
+    "reservation_expires_at": null,
+    "photo_path": "/images/ninja_air_fryer.png"
   },
   {
     "id": 8,
@@ -107,8 +107,8 @@
     "reference_price": "$170.000",
     "price": "$120.000",
     "reserved_until": null,
-    "photo_path": "/images/parlantes.jpg",
-    "reservation_expires_at": null
+    "reservation_expires_at": null,
+    "photo_path": "/images/parlantes.jpg"
   },
   {
     "id": 10,
@@ -120,8 +120,8 @@
     "reference_price": "$75.000",
     "price": "$50.000",
     "reserved_until": null,
-    "photo_path": "/images/impresora.png",
-    "reservation_expires_at": null
+    "reservation_expires_at": null,
+    "photo_path": "/images/impresora.png"
   },
   {
     "id": 11,
@@ -133,8 +133,8 @@
     "reference_price": "$75.000",
     "price": "$40.000",
     "reserved_until": null,
-    "photo_path": "/images/microondas.png",
-    "reservation_expires_at": null
+    "reservation_expires_at": null,
+    "photo_path": "/images/microondas.png"
   },
   {
     "id": 12,
@@ -158,8 +158,8 @@
     "reference_price": "$160.000",
     "price": "$100.000",
     "reserved_until": null,
-    "photo_path": "/images/maquina_coser.png",
-    "reservation_expires_at": null
+    "reservation_expires_at": null,
+    "photo_path": "/images/maquina_coser.png"
   },
   {
     "id": 14,
@@ -171,8 +171,8 @@
     "reference_price": "$99.990",
     "price": "$70.000",
     "reserved_until": null,
-    "photo_path": "/images/trotadora.png",
-    "reservation_expires_at": null
+    "reservation_expires_at": null,
+    "photo_path": "/images/trotadora.png"
   },
   {
     "id": 15,
@@ -196,8 +196,8 @@
     "reference_price": "$42.000",
     "price": "$30.000",
     "reserved_until": null,
-    "photo_path": "/images/termoventilador.png",
-    "reservation_expires_at": null
+    "reservation_expires_at": null,
+    "photo_path": "/images/termoventilador.png"
   },
   {
     "id": 17,
@@ -209,8 +209,8 @@
     "reference_price": "$39.990",
     "price": "$30.000",
     "reserved_until": null,
-    "photo_path": "/images/procesadora_alimentos.png",
-    "reservation_expires_at": null
+    "reservation_expires_at": null,
+    "photo_path": "/images/procesadora_alimentos.png"
   },
   {
     "id": 18,
@@ -222,8 +222,8 @@
     "reference_price": "$34.990",
     "price": "$20.000",
     "reserved_until": null,
-    "photo_path": "/images/licuadora.png",
-    "reservation_expires_at": null
+    "reservation_expires_at": null,
+    "photo_path": "/images/licuadora.png"
   },
   {
     "id": 19,
@@ -235,8 +235,8 @@
     "reference_price": "$18.990",
     "price": "$10.000",
     "reserved_until": null,
-    "photo_path": "/images/sandwichera.png",
-    "reservation_expires_at": null
+    "reservation_expires_at": null,
+    "photo_path": "/images/sandwichera.png"
   },
   {
     "id": 20,
@@ -248,8 +248,8 @@
     "reference_price": "$120.000",
     "price": "$80.000",
     "reserved_until": null,
-    "photo_path": "/images/depiladora_laser.jpg",
-    "reservation_expires_at": null
+    "reservation_expires_at": null,
+    "photo_path": "/images/depiladora_laser.jpg"
   },
   {
     "id": 21,
@@ -321,177 +321,177 @@
     "reference_price": "$179.990",
     "price": "$130.000",
     "reserved_until": null,
-    "photo_path": "/images/aspiradora_tapiz.png",
-    "reservation_expires_at": null
+    "reservation_expires_at": null,
+    "photo_path": "/images/aspiradora_tapiz.png"
   },
   {
     "id": 27,
     "name": "Ring Fit - Switch",
-    "status": "Available",
+    "status": "available",
     "description": "Juego de Nintendo Switch, incluyendo el aro de metal para ejercicios. Con caja.",
     "category": "Videojuegos",
-    "reference_price": 169990,
-    "price": 80000,
+    "reference_price": "$169.990",
+    "price": "$80.000",
     "photo_path": "/images/ring_fit.png"
   },
   {
     "id": 28,
     "name": "Elden Ring - PS4",
-    "status": "Available",
+    "status": "available",
     "description": "Actualizable a versión PS5 mediante descarga digital. En excelente estado.",
     "category": "Videojuegos",
-    "reference_price": 54980,
-    "price": 40000,
+    "reference_price": "$54.980",
+    "price": "$40.000",
     "photo_path": "/images/elden_ring.png"
   },
   {
     "id": 29,
     "name": "Hogwarts Legacy - PS5",
-    "status": "Available",
+    "status": "available",
     "description": "Versión física. En excelente estado. Vuelve a Hogwarts, la mejor recreación a la fecha del castillo.",
     "category": "Videojuegos",
-    "reference_price": 64990,
-    "price": 40000,
+    "reference_price": "$64.990",
+    "price": "$40.000",
     "photo_path": "/images/hogwarts_legacy.png"
   },
   {
     "id": 30,
     "name": "Death Stranding 2 - PS5",
-    "status": "Available",
+    "status": "available",
     "description": "Versión física. En excelente estado. Sumergete en la cabeza del maestro de maestros Hideo Kojima sama.",
     "category": "Videojuegos",
-    "reference_price": 84990,
-    "price": 50000,
+    "reference_price": "$84.990",
+    "price": "$50.000",
     "photo_path": "/images/death_stranding_2.png"
   },
   {
     "id": 31,
     "name": "XCOM 2 - PS4",
-    "status": "Available",
+    "status": "available",
     "description": "Versión física. Excelente juego de estrategia por turnos contra alienigenas.",
     "category": "Videojuegos",
-    "reference_price": 27990,
-    "price": 15000,
+    "reference_price": "$27.990",
+    "price": "$15.000",
     "photo_path": "/images/xcom_2.png"
   },
   {
     "id": 32,
     "name": "Desierto Prohibido",
-    "status": "Available",
+    "status": "available",
     "description": "Caja de metal, incluye todos sus accesorios. En perfecto estado.",
     "category": "Juegos de Mesa",
-    "reference_price": 29990,
-    "price": 25000,
+    "reference_price": "$29.990",
+    "price": "$25.000",
     "photo_path": "/images/desierto_prohibido.png"
   },
   {
     "id": 33,
     "name": "Sky Team",
-    "status": "Available",
+    "status": "available",
     "description": "Para dos jugadores, en perfecto estado. Mejor juego del año 2024 (Spiel des Jahres)",
     "category": "Juegos de Mesa",
-    "reference_price": 29990,
-    "price": 25000,
+    "reference_price": "$29.990",
+    "price": "$25.000",
     "photo_path": "/images/sky_team.png"
   },
   {
     "id": 34,
     "name": "Ticket to Ride Londres",
-    "status": "Available",
+    "status": "available",
     "description": "En perfecto estado, muy bueno! Más rápido que la edición normal.",
     "category": "Juegos de Mesa",
-    "reference_price": 21490,
-    "price": 15000,
+    "reference_price": "$21.490",
+    "price": "$15.000",
     "photo_path": "/images/ticket_to_ride_londres.png"
   },
   {
     "id": 35,
     "name": "Pájaros Cantores",
-    "status": "Available",
+    "status": "available",
     "description": "Juego de cartas inspirado en aves. De 2 a 4 jugadores, 30min por partida.",
     "category": "Juegos de Mesa",
-    "reference_price": 9990,
-    "price": 8000,
+    "reference_price": "$9.990",
+    "price": "$8.000",
     "photo_path": "/images/pajaros_cantores.png"
   },
   {
     "id": 36,
     "name": "Sushi Go",
-    "status": "Available",
+    "status": "available",
     "description": "Caja de metal, incluye todos sus accesorios. En perfecto estado.",
     "category": "Juegos de Mesa",
-    "reference_price": 8990,
-    "price": 6000,
+    "reference_price": "$8.990",
+    "price": "$6.000",
     "photo_path": "/images/sushi_go.png"
   },
   {
     "id": 37,
     "name": "Los Inseparables",
-    "status": "Available",
+    "status": "available",
     "description": "Los inseparables es la versión en castellano del juego publicado por la editorial francesa Sweet Games: Les Poilus (The Grizzled), de gran éxito en Francia y USA. Bien difícil!",
     "category": "Juegos de Mesa",
-    "reference_price": 17990,
-    "price": 12000,
+    "reference_price": "$17.990",
+    "price": "$12.000",
     "photo_path": "/images/los_inseparables.png"
   },
   {
     "id": 38,
     "name": "Carcassone + expansión",
-    "status": "Available",
+    "status": "available",
     "description": "Juego base más expansión posadas y catedrales",
     "category": "Juegos de Mesa",
-    "reference_price": 49990,
-    "price": 35000,
+    "reference_price": "$49.990",
+    "price": "$35.000",
     "photo_path": "/images/carcassone.png"
   },
   {
     "id": 39,
     "name": "7 Wonders Duel",
-    "status": "Available",
+    "status": "available",
     "description": "Edición de 2 jugadores del afamado juego 7 Wonders. En excelente estado.",
     "category": "Juegos de Mesa",
-    "reference_price": 26990,
-    "price": 20000,
+    "reference_price": "$26.990",
+    "price": "$20.000",
     "photo_path": "/images/7_wonders_duel.png"
   },
   {
     "id": 40,
     "name": "Código Secreto",
-    "status": "Available",
+    "status": "available",
     "description": "El juego de mesa Código Secreto (o Codenames) es un entretenido party game de deducción y palabras para 2 a 8 jugadores.",
     "category": "Juegos de Mesa",
-    "reference_price": 19990,
-    "price": 15000,
+    "reference_price": "$19.990",
+    "price": "$15.000",
     "photo_path": "/images/codigo_secreto.png"
   },
   {
     "id": 41,
     "name": "Catan - Juego de Tronos",
-    "status": "Available",
+    "status": "available",
     "description": "Versión especial de CATAN inspirado en Game of Thrones, le da una etapa colaborativa al juego base de CATAN, para no terminar tan peleado :)",
     "category": "Juegos de Mesa",
-    "reference_price": 59990,
-    "price": 40000,
+    "reference_price": "$59.990",
+    "price": "$40.000",
     "photo_path": "/images/catan_juego_de_tronos.png"
   },
   {
     "id": 42,
     "name": "Mysterium",
-    "status": "Available",
+    "status": "available",
     "description": "En Mysterium, un jugador asume el papel de fantasma mientras que todos los demás son mediums. Para resolver el crimen, el fantasma primero debe recordar a todos los sospechos",
     "category": "Juegos de Mesa",
-    "reference_price": 39990,
-    "price": 30000,
+    "reference_price": "$39.990",
+    "price": "$30.000",
     "photo_path": "/images/mysterium.png"
   },
   {
     "id": 43,
     "name": "Pesa Digital Xiaomi",
-    "status": "Available",
+    "status": "available",
     "description": "Conectividad bluethooth al celular mediante app \\\"Zepp\\\", modelo Mi Smart Scale 2",
     "category": "Electrodomésticos",
-    "reference_price": 19990,
-    "price": 10000,
+    "reference_price": "$19.990",
+    "price": "$10.000",
     "photo_path": "/images/pesa_digital_xiaomi.jpg"
   }
 ]
