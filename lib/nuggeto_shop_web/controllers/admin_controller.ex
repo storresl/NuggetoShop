@@ -20,6 +20,23 @@ defmodule NuggetoShopWeb.AdminController do
   end
 
   def update(conn, %{"id" => id, "item" => item_params}) do
+    item_params =
+      if upload = item_params["image"] do
+        item = NuggetoShop.Catalog.get_item(id)
+        if item && item.image do
+          old_filename = String.replace_prefix(item.image, "/images/", "")
+          old_filepath = Path.join(:code.priv_dir(:nuggeto_shop), "static/images/#{old_filename}")
+          File.rm(old_filepath)
+        end
+
+        filename = String.replace(upload.filename, " ", "_")
+        dest_path = Path.join(:code.priv_dir(:nuggeto_shop), "static/images/#{filename}")
+        File.cp!(upload.path, dest_path)
+        Map.put(item_params, "image", "/images/#{filename}")
+      else
+        item_params
+      end
+
     NuggetoShop.Catalog.update_item(id, item_params)
 
     conn

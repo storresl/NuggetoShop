@@ -111,7 +111,7 @@ defmodule NuggetoShopWeb.AdminHTML do
       </div>
 
       <div class="bg-white rounded-xl shadow overflow-hidden p-6">
-        <form action={"/admin/edit/#{@item.id}"} method="post" class="space-y-6">
+        <form action={"/admin/edit/#{@item.id}"} method="post" enctype="multipart/form-data" class="space-y-6">
           <input type="hidden" name="_csrf_token" value={get_csrf_token()} />
           
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -142,6 +142,16 @@ defmodule NuggetoShopWeb.AdminHTML do
                 <option value="reserved" selected={Map.get(@item, :status) == "reserved"}>Reservado</option>
                 <option value="sold" selected={Map.get(@item, :status) == "sold"}>Vendido</option>
               </select>
+            </div>
+
+            <div class="md:col-span-2 flex flex-col sm:flex-row items-start sm:items-center gap-4 border p-4 rounded-lg bg-gray-50 border-gray-200">
+              <div class="w-32 h-32 shrink-0 rounded-lg overflow-hidden border border-gray-300 bg-white">
+                <img src={@item.image} alt={@item.name} class="w-full h-full object-contain" />
+              </div>
+              <div class="flex-grow w-full">
+                <label class="block text-sm font-medium text-gray-700 mb-1">Cambiar Imagen (Opcional)</label>
+                <input type="file" name="item[image]" accept="image/*" class="block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 border focus:ring-blue-500 focus:border-blue-500 text-gray-900 bg-white" />
+              </div>
             </div>
 
             <div class="md:col-span-2">
