@@ -7,12 +7,14 @@ defmodule NuggetoShopWeb.PageController do
 
     active_category = Map.get(params, "category", "Todo")
     search_query = Map.get(params, "q", "")
+    hide_unavailable = Map.get(params, "hide_unavailable") == "true"
 
     render(conn, :home,
       items: items,
       categories: categories,
       active_category: active_category,
-      search_query: search_query
+      search_query: search_query,
+      hide_unavailable: hide_unavailable
     )
   end
 

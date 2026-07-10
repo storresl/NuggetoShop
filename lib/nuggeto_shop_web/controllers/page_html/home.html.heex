@@ -26,7 +26,7 @@
     <div class="flex gap-2 w-max">
       <%= for cat <- ["Todo" | @categories] do %>
         <a
-          href={"/?category=#{URI.encode(cat)}&q=#{URI.encode(@search_query)}"}
+          href={"/?category=#{URI.encode(cat)}&q=#{URI.encode(@search_query)}&hide_unavailable=#{@hide_unavailable}"}
           class={[
             "px-4 py-2 rounded-full whitespace-nowrap text-sm font-semibold transition-colors border",
             if(@active_category == cat,
@@ -41,23 +41,41 @@
     </div>
   </div>
 
-  <!-- Search -->
-  <form action="/" method="get" class="w-full md:w-64 shrink-0">
-    <input type="hidden" name="category" value={@active_category} />
-    <input
-      type="search"
-      name="q"
-      value={@search_query}
-      placeholder="Buscar productos..."
-      class="w-full px-4 py-2 rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#F97316] focus:border-transparent text-sm"
-    />
-  </form>
+  <!-- Search and Toggles -->
+  <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto shrink-0 items-center">
+    <a
+      href={"/?category=#{URI.encode(@active_category)}&q=#{URI.encode(@search_query)}&hide_unavailable=#{not @hide_unavailable}"}
+      class={[
+        "px-4 py-2 rounded-full border text-sm font-semibold transition-colors flex items-center gap-2 w-full sm:w-auto justify-center",
+        if(@hide_unavailable,
+          do: "bg-gray-900 text-white border-gray-900",
+          else: "bg-white text-gray-700 border-gray-200 hover:bg-gray-50"
+        )
+      ]}
+    >
+      <.icon name={if @hide_unavailable, do: "hero-eye-slash", else: "hero-eye"} class="w-4 h-4" />
+      Ocultar no disponibles
+    </a>
+
+    <form action="/" method="get" class="w-full sm:w-64 shrink-0">
+      <input type="hidden" name="category" value={@active_category} />
+      <input type="hidden" name="hide_unavailable" value={to_string(@hide_unavailable)} />
+      <input
+        type="search"
+        name="q"
+        value={@search_query}
+        placeholder="Buscar productos..."
+        class="w-full px-4 py-2 rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#F97316] focus:border-transparent text-sm"
+      />
+    </form>
+  </div>
 </div>
 
   <!-- Items Grid -->
   <div class="pb-12 w-full">
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6 w-full">
     <%= for item <- @items do %>
+      <%= if not @hide_unavailable or Map.get(item, :status, "available") == "available" do %>
       <div class={[
         "group rounded-2xl border border-gray-100 bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col",
         if(Map.get(item, :status, "available") != "available",
@@ -247,6 +265,7 @@
           </form>
         </dialog>
       </div>
+      <% end %>
     <% end %>
   </div>
 </div>
