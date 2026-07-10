@@ -61,6 +61,21 @@ defmodule NuggetoShop.Catalog do
     GenServer.cast(__MODULE__, {:update_item, id, updates})
   end
 
+  def create_item(attrs) do
+    %Item{}
+    |> Item.changeset(attrs)
+    |> Repo.insert()
+  end
+
+  def delete_item(id) do
+    item = get_item(id)
+    if item do
+      Repo.delete(item)
+    else
+      {:error, :not_found}
+    end
+  end
+
   # --- Server Callbacks ---
 
   @impl true

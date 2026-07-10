@@ -35,8 +35,11 @@ defmodule NuggetoShopWeb.Router do
     pipe_through :admin
 
     get "/", AdminController, :index
+    get "/new", AdminController, :new
+    post "/new", AdminController, :create
     post "/status/:id", AdminController, :update_status
     get "/edit/:id", AdminController, :edit
     post "/edit/:id", AdminController, :update
+    post "/delete/:id", AdminController, :delete
   end
 end
