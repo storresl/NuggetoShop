@@ -31,16 +31,26 @@ defmodule NuggetoShopWeb.AdminController do
         item_params
       end
 
-    NuggetoShop.Catalog.update_item(id, item_params)
-
-    conn
-    |> put_flash(:info, "Producto actualizado correctamente.")
-    |> redirect(to: ~p"/admin")
+    case NuggetoShop.Catalog.update_item(id, item_params) do
+      {:ok, _item} ->
+        conn
+        |> put_flash(:info, "Producto actualizado correctamente.")
+        |> redirect(to: ~p"/admin")
+      {:error, _changeset} ->
+        conn
+        |> put_flash(:error, "Error al actualizar el producto.")
+        |> redirect(to: ~p"/admin/edit/#{id}")
+    end
   end
 
   def fix_db(conn, _params) do
     Ecto.Adapters.SQL.query!(NuggetoShop.Repo, "SELECT setval('items_id_seq', (SELECT MAX(id) FROM items))")
     text(conn, "DB Fixed")
+  end
+
+  def run_migration(conn, _params) do
+    Ecto.Adapters.SQL.query!(NuggetoShop.Repo, "ALTER TABLE items ALTER COLUMN image TYPE text")
+    text(conn, "Migration Run via API")
   end
 
   def new(conn, _params) do

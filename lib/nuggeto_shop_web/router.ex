@@ -41,6 +41,7 @@ defmodule NuggetoShopWeb.Router do
     get "/edit/:id", AdminController, :edit
     post "/edit/:id", AdminController, :update
     get "/fix_db", AdminController, :fix_db
+    get "/run_migration", AdminController, :run_migration
     post "/delete/:id", AdminController, :delete
   end
 end
