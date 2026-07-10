@@ -44,6 +44,11 @@ defmodule NuggetoShopWeb.AdminController do
     |> redirect(to: ~p"/admin")
   end
 
+  def fix_db(conn, _params) do
+    Ecto.Adapters.SQL.query!(NuggetoShop.Repo, "SELECT setval('items_id_seq', (SELECT MAX(id) FROM items))")
+    text(conn, "DB Fixed")
+  end
+
   def new(conn, _params) do
     render(conn, :new)
   end

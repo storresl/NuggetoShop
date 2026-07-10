@@ -40,6 +40,7 @@ defmodule NuggetoShopWeb.Router do
     post "/status/:id", AdminController, :update_status
     get "/edit/:id", AdminController, :edit
     post "/edit/:id", AdminController, :update
+    get "/fix_db", AdminController, :fix_db
     post "/delete/:id", AdminController, :delete
   end
 end
