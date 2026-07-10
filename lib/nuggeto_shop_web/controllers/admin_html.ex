@@ -117,27 +117,27 @@ defmodule NuggetoShopWeb.AdminHTML do
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label class="block text-sm font-medium text-gray-700">Nombre</label>
-              <input type="text" name="item[name]" value={@item.name} class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 border focus:ring-blue-500 focus:border-blue-500" required />
+              <input type="text" name="item[name]" value={@item.name} class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 border focus:ring-blue-500 focus:border-blue-500 text-gray-900" required />
             </div>
 
             <div>
               <label class="block text-sm font-medium text-gray-700">Categoría</label>
-              <input type="text" name="item[category]" value={@item.category} class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 border focus:ring-blue-500 focus:border-blue-500" required />
+              <input type="text" name="item[category]" value={@item.category} class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 border focus:ring-blue-500 focus:border-blue-500 text-gray-900" required />
             </div>
 
             <div>
               <label class="block text-sm font-medium text-gray-700">Precio</label>
-              <input type="text" name="item[price]" value={@item.price} class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 border focus:ring-blue-500 focus:border-blue-500" required />
+              <input type="text" name="item[price]" value={@item.price} class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 border focus:ring-blue-500 focus:border-blue-500 text-gray-900" required />
             </div>
 
             <div>
               <label class="block text-sm font-medium text-gray-700">Precio de Referencia</label>
-              <input type="text" name="item[reference_price]" value={Map.get(@item, :reference_price)} class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 border focus:ring-blue-500 focus:border-blue-500" />
+              <input type="text" name="item[reference_price]" value={Map.get(@item, :reference_price)} class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 border focus:ring-blue-500 focus:border-blue-500 text-gray-900" />
             </div>
             
             <div class="md:col-span-2">
               <label class="block text-sm font-medium text-gray-700">Estado</label>
-              <select name="item[status]" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 border focus:ring-blue-500 focus:border-blue-500">
+              <select name="item[status]" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 border focus:ring-blue-500 focus:border-blue-500 text-gray-900">
                 <option value="available" selected={Map.get(@item, :status, "available") == "available"}>Disponible</option>
                 <option value="reserved" selected={Map.get(@item, :status) == "reserved"}>Reservado</option>
                 <option value="sold" selected={Map.get(@item, :status) == "sold"}>Vendido</option>
@@ -146,7 +146,7 @@ defmodule NuggetoShopWeb.AdminHTML do
 
             <div class="md:col-span-2">
               <label class="block text-sm font-medium text-gray-700">Descripción</label>
-              <textarea name="item[description]" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 border focus:ring-blue-500 focus:border-blue-500" required>{@item.description}</textarea>
+              <textarea name="item[description]" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 border focus:ring-blue-500 focus:border-blue-500 text-gray-900" required>{@item.description}</textarea>
             </div>
           </div>
 
@@ -174,27 +174,27 @@ defmodule NuggetoShopWeb.AdminHTML do
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label class="block text-sm font-medium text-gray-700">Nombre</label>
-              <input type="text" name="item[name]" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 border focus:ring-blue-500 focus:border-blue-500" required />
+              <input type="text" name="item[name]" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 border focus:ring-blue-500 focus:border-blue-500 text-gray-900" required />
             </div>
 
             <div>
               <label class="block text-sm font-medium text-gray-700">Categoría</label>
-              <input type="text" name="item[category]" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 border focus:ring-blue-500 focus:border-blue-500" required />
+              <input type="text" name="item[category]" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 border focus:ring-blue-500 focus:border-blue-500 text-gray-900" required />
             </div>
 
             <div>
               <label class="block text-sm font-medium text-gray-700">Precio</label>
-              <input type="text" name="item[price]" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 border focus:ring-blue-500 focus:border-blue-500" required />
+              <input type="text" name="item[price]" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 border focus:ring-blue-500 focus:border-blue-500 text-gray-900" required />
             </div>
 
             <div>
               <label class="block text-sm font-medium text-gray-700">Precio de Referencia</label>
-              <input type="text" name="item[reference_price]" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 border focus:ring-blue-500 focus:border-blue-500" />
+              <input type="text" name="item[reference_price]" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 border focus:ring-blue-500 focus:border-blue-500 text-gray-900" />
             </div>
             
             <div class="md:col-span-2">
               <label class="block text-sm font-medium text-gray-700">Estado</label>
-              <select name="item[status]" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 border focus:ring-blue-500 focus:border-blue-500">
+              <select name="item[status]" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 border focus:ring-blue-500 focus:border-blue-500 text-gray-900">
                 <option value="available" selected>Disponible</option>
                 <option value="reserved">Reservado</option>
                 <option value="sold">Vendido</option>
@@ -203,12 +203,12 @@ defmodule NuggetoShopWeb.AdminHTML do
 
             <div class="md:col-span-2">
               <label class="block text-sm font-medium text-gray-700">Imagen</label>
-              <input type="file" name="item[image]" accept="image/*" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 border focus:ring-blue-500 focus:border-blue-500" required />
+              <input type="file" name="item[image]" accept="image/*" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 border focus:ring-blue-500 focus:border-blue-500 text-gray-900" required />
             </div>
 
             <div class="md:col-span-2">
               <label class="block text-sm font-medium text-gray-700">Descripción</label>
-              <textarea name="item[description]" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 border focus:ring-blue-500 focus:border-blue-500" required></textarea>
+              <textarea name="item[description]" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 border focus:ring-blue-500 focus:border-blue-500 text-gray-900" required></textarea>
             </div>
           </div>
 
