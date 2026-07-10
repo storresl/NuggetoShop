@@ -23,16 +23,10 @@ defmodule NuggetoShopWeb.AdminController do
     item_params =
       if upload = item_params["image"] do
         item = NuggetoShop.Catalog.get_item(id)
-        if item && item.image do
-          old_filename = String.replace_prefix(item.image, "/images/", "")
-          old_filepath = Path.join(:code.priv_dir(:nuggeto_shop), "static/images/#{old_filename}")
-          File.rm(old_filepath)
-        end
-
-        filename = String.replace(upload.filename, " ", "_")
-        dest_path = Path.join(:code.priv_dir(:nuggeto_shop), "static/images/#{filename}")
-        File.cp!(upload.path, dest_path)
-        Map.put(item_params, "image", "/images/#{filename}")
+        content_type = upload.content_type || "image/jpeg"
+        binary = File.read!(upload.path)
+        base64 = Base.encode64(binary)
+        Map.put(item_params, "image", "data:#{content_type};base64,#{base64}")
       else
         item_params
       end
@@ -56,10 +50,10 @@ defmodule NuggetoShopWeb.AdminController do
   def create(conn, %{"item" => item_params}) do
     item_params =
       if upload = item_params["image"] do
-        filename = String.replace(upload.filename, " ", "_")
-        dest_path = Path.join(:code.priv_dir(:nuggeto_shop), "static/images/#{filename}")
-        File.cp!(upload.path, dest_path)
-        Map.put(item_params, "image", "/images/#{filename}")
+        content_type = upload.content_type || "image/jpeg"
+        binary = File.read!(upload.path)
+        base64 = Base.encode64(binary)
+        Map.put(item_params, "image", "data:#{content_type};base64,#{base64}")
       else
         item_params
       end
@@ -79,11 +73,8 @@ defmodule NuggetoShopWeb.AdminController do
   def delete(conn, %{"id" => id}) do
     item = NuggetoShop.Catalog.get_item(id)
     
-    if item && item.image do
-      filename = String.replace_prefix(item.image, "/images/", "")
-      filepath = Path.join(:code.priv_dir(:nuggeto_shop), "static/images/#{filename}")
-      File.rm(filepath)
-    end
+    # Note: We won't delete old images if they were base64 or static.
+    # Local ephemeral filesystem handles garbage collection anyway.
 
     NuggetoShop.Catalog.delete_item(id)
 
