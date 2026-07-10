@@ -58,7 +58,7 @@ defmodule NuggetoShop.Catalog do
 
 
   def update_item(id, updates) do
-    GenServer.cast(__MODULE__, {:update_item, id, updates})
+    GenServer.call(__MODULE__, {:update_item, id, updates})
   end
 
   def create_item(attrs) do
@@ -145,7 +145,7 @@ defmodule NuggetoShop.Catalog do
   end
 
   @impl true
-  def handle_cast({:update_item, id, updates}, state) do
+  def handle_call({:update_item, id, updates}, _from, state) do
     if item = Repo.get(Item, id) do
       updates_map = Enum.into(updates, %{}, fn {k, v} -> {to_string(k), v} end)
       
@@ -160,9 +160,10 @@ defmodule NuggetoShop.Catalog do
           updates_map
         end
 
-      Item.changeset(item, updates_map) |> Repo.update()
+      result = Item.changeset(item, updates_map) |> Repo.update()
+      {:reply, result, state}
+    else
+      {:reply, {:error, :not_found}, state}
     end
-
-    {:noreply, state}
   end
 end
